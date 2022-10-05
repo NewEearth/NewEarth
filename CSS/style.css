@@ -48,12 +48,12 @@ a {
     margin-top: 50px;
 }
 
-.screen {
+#content_env_record, #content_env_protect_record, #content_env_step, #content_env_todo {
     position: absolute;
     left: 300px;
     top: 150px;
     width: 80%;
-    height: 800px;
+    height: 80%;
     border: 1px solid gray;
     background-color: gray;
 }
@@ -65,5 +65,52 @@ a {
     margin: 10px;
 } */
 
+#content_env_step{
+    background-image: url(/imgs/ground1.jpg);
+}
+#seed1{
+    display: absolute;
+    background-image: url(/imgs/seed1.png);
+    width: 50px;
+    height: 50px;
+    border: 10px solid black;
+}
 
+#content_env_todo_title{
+    font-size: 3em;
+    margin-left: 20px;
+}
+#check_list div:nth-of-type(n){
+    border: 5px solid black;
+    padding: 30px;
+    margin-top: 50px;
+}
+input[type="checkbox"]{
+    display: none;
+}
+input[type="checkbox"] + label{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border:3px solid black;
+    position: relative;
+  }
+input[type="checkbox"]:checked + label::after{
+    content:'✔';
+    font-size: 25px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top:0;
+  }
+
+input[type="text"]{
+    height: auto; /*높이 초기화*/
+    line-height: normal; /*line-height 초기화*/
+    font-size: 2em;
+    width: 80%;
+    background-color: gray;
+}
 
