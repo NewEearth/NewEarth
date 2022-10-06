@@ -54,17 +54,11 @@ a {
     top: 150px;
     width: 80%;
     height: 80%;
-    border: 1px solid gray;
     background-color: gray;
 }
 
-/* .top_list > .item:nth-child(n) {
-    margin: 0 20px;
-}
-.top_list_2 > .item:nth-child(n){
-    margin: 10px;
-} */
 
+/** 환경발자국 */
 #content_env_step{
     background-image: url(/imgs/ground1.jpg);
 }
@@ -76,14 +70,18 @@ a {
     border: 10px solid black;
 }
 
+/** to do list */
+#content_env_todo{
+    background-color: rgba(255, 255, 255, 0);
+}
 #content_env_todo_title{
     font-size: 3em;
     margin-left: 20px;
 }
 #check_list div:nth-of-type(n){
-    border: 5px solid black;
-    padding: 30px;
-    margin-top: 50px;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    margin-top: 30px;
 }
 input[type="checkbox"]{
     display: none;
@@ -92,7 +90,7 @@ input[type="checkbox"] + label{
     display: inline-block;
     width: 30px;
     height: 30px;
-    border:3px solid black;
+    background-color: lightgray;
     position: relative;
   }
 input[type="checkbox"]:checked + label::after{
@@ -106,11 +104,22 @@ input[type="checkbox"]:checked + label::after{
     top:0;
   }
 
-input[type="text"]{
-    height: auto; /*높이 초기화*/
-    line-height: normal; /*line-height 초기화*/
-    font-size: 2em;
+input[type="text"] {
+    display: inline-block;
+    height: auto; 
+    line-height: normal;
+    font-size: 1.5em;
+    padding: 10px;
     width: 80%;
-    background-color: gray;
+    margin-left: 10px;
+    border: none;
+    background: transparent;
 }
+/* input[type="text"] + label{
+    width: 100%;
+			padding: 10px 20px;
+			margin: 5px 0;
+			box-sizing: border-box;
+  } */
+
 
