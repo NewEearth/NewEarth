@@ -122,4 +122,12 @@ input[type="text"] {
 			box-sizing: border-box;
   } */
 
+#seed1{
+    display: inline-block;
+    margin: 50px;
+}
+#seed2{
+    display: inline-block;
+    margin: 50px;
+}
 
