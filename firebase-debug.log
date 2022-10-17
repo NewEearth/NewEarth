@@ -1,67 +1,88 @@
-[debug] [2022-10-09T11:56:14.687Z] ----------------------------------------------------------------------
-[debug] [2022-10-09T11:56:14.690Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\jhy_0\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
-[debug] [2022-10-09T11:56:14.691Z] CLI Version:   11.14.1
-[debug] [2022-10-09T11:56:14.691Z] Platform:      win32
-[debug] [2022-10-09T11:56:14.691Z] Node Version:  v16.17.0
-[debug] [2022-10-09T11:56:14.693Z] Time:          Sun Oct 09 2022 20:56:14 GMT+0900 (대한민국 표준시)
-[debug] [2022-10-09T11:56:14.693Z] ----------------------------------------------------------------------
+[debug] [2022-10-17T04:16:33.447Z] ----------------------------------------------------------------------
+[debug] [2022-10-17T04:16:33.456Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\jhy_0\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2022-10-17T04:16:33.458Z] CLI Version:   11.14.1
+[debug] [2022-10-17T04:16:33.459Z] Platform:      win32
+[debug] [2022-10-17T04:16:33.459Z] Node Version:  v16.17.0
+[debug] [2022-10-17T04:16:33.467Z] Time:          Mon Oct 17 2022 13:16:33 GMT+0900 (대한민국 표준시)
+[debug] [2022-10-17T04:16:33.469Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2022-10-09T11:56:14.702Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2022-10-09T11:56:14.703Z] > authorizing via signed-in user (sarahinjeju@gmail.com)
+[debug] [2022-10-17T04:16:33.486Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2022-10-17T04:16:33.825Z] Object "" in "firebase.json" has unknown property: {"additionalProperty":"ignore"}
+[debug] [2022-10-17T04:16:33.854Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-10-17T04:16:33.856Z] > authorizing via signed-in user (sarahinjeju@gmail.com)
+[debug] [2022-10-17T04:16:33.857Z] [iam] checking project newearth-53c7f for permissions ["firebase.projects.get"]
+[debug] [2022-10-17T04:16:33.861Z] > refreshing access token with scopes: []
+[debug] [2022-10-17T04:16:33.864Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-10-17T04:16:33.864Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-10-17T04:16:34.156Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2022-10-17T04:16:34.157Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-10-17T04:16:34.199Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/newearth-53c7f:testIamPermissions [none]
+[debug] [2022-10-17T04:16:34.199Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/newearth-53c7f:testIamPermissions x-goog-quota-user=projects/newearth-53c7f
+[debug] [2022-10-17T04:16:34.199Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/newearth-53c7f:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-10-17T04:16:34.311Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2022-10-17T04:16:34.311Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2022-10-17T04:16:35.432Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/newearth-53c7f:testIamPermissions 200
+[debug] [2022-10-17T04:16:35.432Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/newearth-53c7f:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-10-17T04:16:35.436Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/newearth-53c7f [none]
+[debug] [2022-10-17T04:16:35.924Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/newearth-53c7f 200
+[debug] [2022-10-17T04:16:35.924Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/newearth-53c7f {"projectId":"newearth-53c7f","projectNumber":"66430526425","displayName":"NewEarth","name":"projects/newearth-53c7f","resources":{"hostingSite":"newearth-53c7f","realtimeDatabaseInstance":"newearth-53c7f-default-rtdb"},"state":"ACTIVE","etag":"1_109525fa-f9b3-473c-8e45-ea282f20519c"}
 [info] 
-     ######## #### ########  ######## ########     ###     ######  ########
-     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
-     ######    ##  ########  ######   ########  #########  ######  ######
-     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
-     ##       #### ##     ## ######## ########  ##     ##  ######  ########
-
-You're about to initialize a Firebase project in this directory:
-
-  C:\Users\jhy_0\NewEarth
-
+[info] === Serving from 'C:\Users\jhy_0\NewEarth'...
 [info] 
-=== Project Setup
-[info] 
-[info] First, let's associate this project directory with a Firebase project.
-[info] You can create multiple project aliases by running firebase use --add, 
-[info] but for now we'll just set up a default project.
-[info] 
-[debug] [2022-10-09T12:09:09.090Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
-[debug] [2022-10-09T12:09:09.847Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
-[debug] [2022-10-09T12:09:09.848Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
-[info] i  Using project newearth-53c7f (NewEarth) 
-[info] 
-=== Database Setup
-[info] i  database: ensuring required API firebasedatabase.googleapis.com is enabled... 
-[debug] [2022-10-09T12:09:24.965Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/newearth-53c7f/services/firebasedatabase.googleapis.com [none]
-[debug] [2022-10-09T12:09:24.965Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/newearth-53c7f/services/firebasedatabase.googleapis.com x-goog-quota-user=projects/newearth-53c7f
-[debug] [2022-10-09T12:09:26.331Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/newearth-53c7f/services/firebasedatabase.googleapis.com 200
-[debug] [2022-10-09T12:09:26.332Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/newearth-53c7f/services/firebasedatabase.googleapis.com [omitted]
-[warn] !  database: missing required API firebasedatabase.googleapis.com. Enabling now... 
-[debug] [2022-10-09T12:09:26.334Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/newearth-53c7f/services/firebasedatabase.googleapis.com:enable [none]
-[debug] [2022-10-09T12:09:26.334Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/newearth-53c7f/services/firebasedatabase.googleapis.com:enable x-goog-quota-user=projects/newearth-53c7f
-[debug] [2022-10-09T12:09:27.859Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/newearth-53c7f/services/firebasedatabase.googleapis.com:enable 200
-[debug] [2022-10-09T12:09:27.860Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/newearth-53c7f/services/firebasedatabase.googleapis.com:enable [omitted]
-[debug] [2022-10-09T12:09:37.862Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/newearth-53c7f/services/firebasedatabase.googleapis.com [none]
-[debug] [2022-10-09T12:09:37.862Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/newearth-53c7f/services/firebasedatabase.googleapis.com x-goog-quota-user=projects/newearth-53c7f
-[debug] [2022-10-09T12:09:39.124Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/newearth-53c7f/services/firebasedatabase.googleapis.com 200
-[debug] [2022-10-09T12:09:39.124Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/newearth-53c7f/services/firebasedatabase.googleapis.com [omitted]
-[info] +  database: required API firebasedatabase.googleapis.com is enabled 
-[info] 
-[debug] [2022-10-09T12:09:39.133Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/newearth-53c7f [none]
-[debug] [2022-10-09T12:09:39.670Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/newearth-53c7f 200
-[debug] [2022-10-09T12:09:39.670Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/newearth-53c7f {"projectId":"newearth-53c7f","projectNumber":"66430526425","displayName":"NewEarth","name":"projects/newearth-53c7f","resources":{"hostingSite":"newearth-53c7f"},"state":"ACTIVE","etag":"1_315c3018-f543-49d4-be29-08b2c83598e5"}
-[debug] [2022-10-09T12:10:12.779Z] >>> [apiv2][query] POST https://firebasedatabase.googleapis.com/v1beta/projects/newearth-53c7f/locations/asia-southeast1/instances databaseId=newearth-53c7f-default-rtdb&validateOnly=true
-[debug] [2022-10-09T12:10:12.779Z] >>> [apiv2][body] POST https://firebasedatabase.googleapis.com/v1beta/projects/newearth-53c7f/locations/asia-southeast1/instances {"type":"default_database"}
-[debug] [2022-10-09T12:10:13.941Z] <<< [apiv2][status] POST https://firebasedatabase.googleapis.com/v1beta/projects/newearth-53c7f/locations/asia-southeast1/instances 200
-[debug] [2022-10-09T12:10:13.941Z] <<< [apiv2][body] POST https://firebasedatabase.googleapis.com/v1beta/projects/newearth-53c7f/locations/asia-southeast1/instances {"name":"projects/66430526425/locations/asia-southeast1/instances/newearth-53c7f-default-rtdb","project":"projects/66430526425","databaseUrl":"https://newearth-53c7f-default-rtdb.asia-southeast1.firebasedatabase.app","type":"DEFAULT_DATABASE","state":"ACTIVE"}
-[debug] [2022-10-09T12:10:13.945Z] >>> [apiv2][query] POST https://firebasedatabase.googleapis.com/v1beta/projects/newearth-53c7f/locations/asia-southeast1/instances databaseId=newearth-53c7f-default-rtdb
-[debug] [2022-10-09T12:10:13.946Z] >>> [apiv2][body] POST https://firebasedatabase.googleapis.com/v1beta/projects/newearth-53c7f/locations/asia-southeast1/instances {"type":"default_database"}
-[debug] [2022-10-09T12:10:15.301Z] <<< [apiv2][status] POST https://firebasedatabase.googleapis.com/v1beta/projects/newearth-53c7f/locations/asia-southeast1/instances 200
-[debug] [2022-10-09T12:10:15.301Z] <<< [apiv2][body] POST https://firebasedatabase.googleapis.com/v1beta/projects/newearth-53c7f/locations/asia-southeast1/instances {"name":"projects/66430526425/locations/asia-southeast1/instances/newearth-53c7f-default-rtdb","project":"projects/66430526425","databaseUrl":"https://newearth-53c7f-default-rtdb.asia-southeast1.firebasedatabase.app","type":"DEFAULT_DATABASE","state":"ACTIVE"}
-[info] 
-[info] Firebase Realtime Database Security Rules allow you to define how your data should be
-[info] structured and when your data can be read from and written to.
-[info] 
-[debug] [2022-10-09T12:10:58.725Z] >>> [apiv2][query] GET https://newearth-53c7f-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json [none]
-[debug] [2022-10-09T12:11:00.735Z] <<< [apiv2][status] GET https://newearth-53c7f-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json 200
+[debug] [2022-10-17T04:16:35.941Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/newearth-53c7f/sites 
+[debug] [2022-10-17T04:16:36.726Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/newearth-53c7f/sites 200
+[debug] [2022-10-17T04:16:36.727Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/newearth-53c7f/sites {"sites":[{"name":"projects/newearth-53c7f/sites/newearth-53c7f","defaultUrl":"https://newearth-53c7f.web.app","appId":"1:66430526425:web:efd6c51ac3a5001d976fc8","type":"DEFAULT_SITE"}]}
+[debug] [2022-10-17T04:16:36.728Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/newearth-53c7f/webApps/1:66430526425:web:efd6c51ac3a5001d976fc8/config [none]
+[debug] [2022-10-17T04:16:38.097Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/newearth-53c7f/webApps/1:66430526425:web:efd6c51ac3a5001d976fc8/config 200
+[debug] [2022-10-17T04:16:38.097Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/newearth-53c7f/webApps/1:66430526425:web:efd6c51ac3a5001d976fc8/config {"projectId":"newearth-53c7f","appId":"1:66430526425:web:efd6c51ac3a5001d976fc8","databaseURL":"https://newearth-53c7f-default-rtdb.asia-southeast1.firebasedatabase.app","storageBucket":"newearth-53c7f.appspot.com","apiKey":"AIzaSyB0aVjJBd6RFk5HnYUkanSP3yq2tbZcbbA","authDomain":"newearth-53c7f.firebaseapp.com","messagingSenderId":"66430526425"}
+[info] i  hosting: Serving hosting files from: public {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mpublic\u001b[22m"}}
+[info] +  hosting: Local server: http://localhost:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5000\u001b[22m\u001b[24m"}}
+[info] i  hosting: 127.0.0.1 - - [17/Oct/2022:04:16:41 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [17/Oct/2022:04:16:41 +0000] \"GET / HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36\""}}
+[debug] [2022-10-17T04:16:41.271Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/9.11.0/firebase-app-compat.js [none]
+[debug] [2022-10-17T04:16:41.275Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/9.11.0/firebase-auth-compat.js [none]
+[info] i  hosting: 127.0.0.1 - - [17/Oct/2022:04:16:41 +0000] "GET /CSS/style.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [17/Oct/2022:04:16:41 +0000] \"GET /CSS/style.css HTTP/1.1\" 200 - \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36\""}}
+[debug] [2022-10-17T04:16:41.493Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/9.11.0/firebase-app-compat.js 200
+[debug] [2022-10-17T04:16:41.493Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/9.11.0/firebase-app-compat.js [stream]
+[debug] [2022-10-17T04:16:41.500Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/9.11.0/firebase-auth-compat.js 200
+[debug] [2022-10-17T04:16:41.501Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/9.11.0/firebase-auth-compat.js [stream]
+[info] i  hosting: 127.0.0.1 - - [17/Oct/2022:04:16:41 +0000] "GET /function.js HTTP/1.1" 200 161 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [17/Oct/2022:04:16:41 +0000] \"GET /function.js HTTP/1.1\" 200 161 \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [17/Oct/2022:04:16:41 +0000] "GET /__/firebase/9.11.0/firebase-app-compat.js HTTP/1.1" 200 28974 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [17/Oct/2022:04:16:41 +0000] \"GET /__/firebase/9.11.0/firebase-app-compat.js HTTP/1.1\" 200 28974 \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [17/Oct/2022:04:16:41 +0000] "GET /CSS/reset.css HTTP/1.1" 200 - "http://localhost:5000/CSS/style.css" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [17/Oct/2022:04:16:41 +0000] \"GET /CSS/reset.css HTTP/1.1\" 200 - \"http://localhost:5000/CSS/style.css\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36\""}}
+[debug] [2022-10-17T04:16:41.579Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/9.11.0/firebase-database-compat.js [none]
+[debug] [2022-10-17T04:16:41.593Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/9.11.0/firebase-firestore-compat.js [none]
+[debug] [2022-10-17T04:16:41.603Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/9.11.0/firebase-functions-compat.js [none]
+[debug] [2022-10-17T04:16:41.612Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/9.11.0/firebase-messaging-compat.js [none]
+[info] i  hosting: 127.0.0.1 - - [17/Oct/2022:04:16:41 +0000] "GET /main.js HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [17/Oct/2022:04:16:41 +0000] \"GET /main.js HTTP/1.1\" 200 - \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36\""}}
+[debug] [2022-10-17T04:16:41.636Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/9.11.0/firebase-storage-compat.js [none]
+[info] i  hosting: 127.0.0.1 - - [17/Oct/2022:04:16:41 +0000] "GET /__/firebase/9.11.0/firebase-auth-compat.js HTTP/1.1" 200 125832 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [17/Oct/2022:04:16:41 +0000] \"GET /__/firebase/9.11.0/firebase-auth-compat.js HTTP/1.1\" 200 125832 \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36\""}}
+[debug] [2022-10-17T04:16:41.696Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/9.11.0/firebase-analytics-compat.js [none]
+[debug] [2022-10-17T04:16:41.797Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/9.11.0/firebase-firestore-compat.js 200
+[debug] [2022-10-17T04:16:41.797Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/9.11.0/firebase-firestore-compat.js [stream]
+[debug] [2022-10-17T04:16:41.806Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/9.11.0/firebase-functions-compat.js 200
+[debug] [2022-10-17T04:16:41.807Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/9.11.0/firebase-functions-compat.js [stream]
+[info] i  hosting: 127.0.0.1 - - [17/Oct/2022:04:16:41 +0000] "GET /__/firebase/9.11.0/firebase-functions-compat.js HTTP/1.1" 200 8116 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [17/Oct/2022:04:16:41 +0000] \"GET /__/firebase/9.11.0/firebase-functions-compat.js HTTP/1.1\" 200 8116 \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36\""}}
+[debug] [2022-10-17T04:16:41.814Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/9.11.0/firebase-database-compat.js 200
+[debug] [2022-10-17T04:16:41.815Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/9.11.0/firebase-database-compat.js [stream]
+[debug] [2022-10-17T04:16:41.822Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/9.11.0/firebase-remote-config-compat.js [none]
+[debug] [2022-10-17T04:16:41.828Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/9.11.0/firebase-messaging-compat.js 200
+[debug] [2022-10-17T04:16:41.828Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/9.11.0/firebase-messaging-compat.js [stream]
+[debug] [2022-10-17T04:16:41.865Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/9.11.0/firebase-storage-compat.js 200
+[debug] [2022-10-17T04:16:41.866Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/9.11.0/firebase-storage-compat.js [stream]
+[info] i  hosting: 127.0.0.1 - - [17/Oct/2022:04:16:41 +0000] "GET /__/firebase/9.11.0/firebase-messaging-compat.js HTTP/1.1" 200 38191 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [17/Oct/2022:04:16:41 +0000] \"GET /__/firebase/9.11.0/firebase-messaging-compat.js HTTP/1.1\" 200 38191 \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36\""}}
+[debug] [2022-10-17T04:16:41.923Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/9.11.0/firebase-performance-compat.js [none]
+[debug] [2022-10-17T04:16:41.948Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/9.11.0/firebase-analytics-compat.js 200
+[debug] [2022-10-17T04:16:41.948Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/9.11.0/firebase-analytics-compat.js [stream]
+[info] i  hosting: 127.0.0.1 - - [17/Oct/2022:04:16:41 +0000] "GET /__/firebase/9.11.0/firebase-storage-compat.js HTTP/1.1" 200 38247 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [17/Oct/2022:04:16:41 +0000] \"GET /__/firebase/9.11.0/firebase-storage-compat.js HTTP/1.1\" 200 38247 \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [17/Oct/2022:04:16:41 +0000] "GET /__/firebase/init.js?useEmulator=true HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [17/Oct/2022:04:16:41 +0000] \"GET /__/firebase/init.js?useEmulator=true HTTP/1.1\" 200 - \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [17/Oct/2022:04:16:41 +0000] "GET /imgs/seed1.png HTTP/1.1" 200 88955 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [17/Oct/2022:04:16:41 +0000] \"GET /imgs/seed1.png HTTP/1.1\" 200 88955 \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [17/Oct/2022:04:16:42 +0000] "GET /__/firebase/9.11.0/firebase-analytics-compat.js HTTP/1.1" 200 25810 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [17/Oct/2022:04:16:42 +0000] \"GET /__/firebase/9.11.0/firebase-analytics-compat.js HTTP/1.1\" 200 25810 \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [17/Oct/2022:04:16:42 +0000] "GET /__/firebase/9.11.0/firebase-database-compat.js HTTP/1.1" 200 165650 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [17/Oct/2022:04:16:42 +0000] \"GET /__/firebase/9.11.0/firebase-database-compat.js HTTP/1.1\" 200 165650 \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36\""}}
+[debug] [2022-10-17T04:16:42.075Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/9.11.0/firebase-remote-config-compat.js 200
+[debug] [2022-10-17T04:16:42.076Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/9.11.0/firebase-remote-config-compat.js [stream]
+[info] i  hosting: 127.0.0.1 - - [17/Oct/2022:04:16:42 +0000] "GET /__/firebase/9.11.0/firebase-firestore-compat.js HTTP/1.1" 200 313118 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [17/Oct/2022:04:16:42 +0000] \"GET /__/firebase/9.11.0/firebase-firestore-compat.js HTTP/1.1\" 200 313118 \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [17/Oct/2022:04:16:42 +0000] "GET /__/firebase/9.11.0/firebase-remote-config-compat.js HTTP/1.1" 200 27303 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [17/Oct/2022:04:16:42 +0000] \"GET /__/firebase/9.11.0/firebase-remote-config-compat.js HTTP/1.1\" 200 27303 \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36\""}}
+[debug] [2022-10-17T04:16:42.174Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/9.11.0/firebase-performance-compat.js 200
+[debug] [2022-10-17T04:16:42.174Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/9.11.0/firebase-performance-compat.js [stream]
+[info] i  hosting: 127.0.0.1 - - [17/Oct/2022:04:16:42 +0000] "GET /__/firebase/9.11.0/firebase-performance-compat.js HTTP/1.1" 200 30702 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [17/Oct/2022:04:16:42 +0000] \"GET /__/firebase/9.11.0/firebase-performance-compat.js HTTP/1.1\" 200 30702 \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [17/Oct/2022:04:16:43 +0000] "GET /favicon.ico HTTP/1.1" 304 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [17/Oct/2022:04:16:43 +0000] \"GET /favicon.ico HTTP/1.1\" 304 - \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [17/Oct/2022:04:16:46 +0000] "GET /imgs/ground1.jpg HTTP/1.1" 200 977252 "http://localhost:5000/CSS/style.css" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [17/Oct/2022:04:16:46 +0000] \"GET /imgs/ground1.jpg HTTP/1.1\" 200 977252 \"http://localhost:5000/CSS/style.css\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36\""}}
