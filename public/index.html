@@ -44,7 +44,6 @@
       <!-- right -->
       <nav class="top_list_2">
           <div id="main" class="item">지구이미지</div>
-          <div id="login" class="item">로그인</div>
       </nav>
   </header>
 
@@ -56,9 +55,11 @@
       </aside>
       <section id="content_env_record">
           <article>
-              <header class="env_record">환경일지</header>
+              <!-- <header class="env_record">환경일지</header>
                   <div class="env_record_list">환경일지1</div>
-                  <div class="env_record_list">환경일지2</div>
+                  <div class="env_record_list">환경일지2</div> 
+                환경일지 여기에 작업해주세요! (위는 그냥 참고용)
+                일지작성과 환경일지 간에 화면전환이 필요합니다. 되도록 새 html파일 만들지 말고 작업해주세요-->
           </article>
       </section>
   </div>
@@ -71,9 +72,11 @@
       </aside>
       <section id="content_env_protect_record">
           <article>
-              <header class="env_record">환경일지</header>
+              <!-- <header class="env_record">환경일지</header>
                   <div class="env_record_list">환경일지1</div>
                   <div class="env_record_list">환경일지2</div>
+                환경보호 방법 여기에 작업해주세요! (위는 그냥 참고용)
+                환경보호방법과 환경보호방법작성 간에 화면전환이 필요합니다. 되도록 새 html파일 만들지 말고 작업해주세요-->
           </article>
       </section>
   </div>
@@ -84,20 +87,6 @@
           <div class="location_env_step item">환경발자국</div>
           <div class="location_env_todo item">to do list</div>
       </aside>
-      <section id="content_env_step">
-          <article id="seed1">    
-              <img src="/imgs/seed1.png" width="100px" height="100px">                  <!-- 
-                  <div style="background-image: url(/imgs/seed1.png);">abc</div> -->
-          </article>
-          <article id="seed2">    
-              <img src="/imgs/seed1.png" width="100px" height="100px">                  <!-- 
-                  <div style="background-image: url(/imgs/seed1.png);">abc</div> -->
-          </article>
-          <article id="seed3">    
-              <img src="/imgs/seed1.png" width="100px" height="100px">                  <!-- 
-                  <div style="background-image: url(/imgs/seed1.png);">abc</div> -->
-          </article>
-      </section>
   </div>
 
   <!-- todo -->
@@ -106,48 +95,9 @@
           <div class="location_env_step item">환경발자국</div>
           <div class="location_env_todo item">to do list</div>
       </aside>
-      <section id="content_env_todo">
-        <article>  
-          <fieldset id="check_list">
-              <legend id="content_env_todo_title">To Do List</legend>
-
-              <div>
-                <input type="checkbox" id="checkbox_check1" name="check1">
-                <label for="checkbox_check1"></label>
-                <input type="text" placeholder="(예시)텀블러 사용하기!" id="checkbox_text1" name="text1">
-                <label for="checkbox_text1"></label>
-              </div>
-
-              <div>
-                  <input type="checkbox" id="checkbox_check2" name="check2">
-                  <label for="checkbox_check2"></label>
-                  <input type="text" placeholder="(예시)일회용 사용하지 않기!" id="checkbox_text2" name="text2">
-                  <label for="checkbox_text2"></label>
-              </div>
-              <div>
-                <input type="checkbox" id="checkbox_check3" name="check3">
-                <label for="checkbox_check3"></label>
-                <input type="text" placeholder="(예시)나갈 때 불 끄기!" id="checkbox_text3" name="text3">
-                <label for="checkbox_text3"></label>
-              </div>
-              <div>
-                  <input type="checkbox" id="checkbox_check4" name="check4">
-                  <label for="checkbox_check4"></label>
-                  <input type="text" placeholder="입력해주세요!" id="checkbox_text4" name="text4">
-                  <label for="checkbox_text4"></label>
-                </div>
-                <div>
-                  <input type="checkbox" id="checkbox_check5" name="check3">
-                  <label for="checkbox_check5"></label>
-                  <input type="text" placeholder="입력해주세요!" id="checkbox_text5" name="text5">
-                  <label for="checkbox_text5"></label>
-                </div>
-          </fieldset>
-        </article>
-      </section>
   </div>
 
-  <script src="firebase.js"></script>
+  <script type="module" src="firebase.js"></script>
   <script src="main.js"></script>
   <script src="function.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
