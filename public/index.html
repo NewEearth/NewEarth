@@ -6,17 +6,17 @@
     <title>NewEarth</title>
 
     <!-- update the version number as needed -->
-    <script defer src="/__/firebase/9.12.1/firebase-app-compat.js"></script>
+    <script defer src="/__/firebase/9.13.0/firebase-app-compat.js"></script>
     <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/9.12.1/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/9.12.1/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/9.12.1/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/9.12.1/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/9.12.1/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/9.12.1/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/9.12.1/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/9.12.1/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/9.12.1/firebase-performance-compat.js"></script>
+    <script defer src="/__/firebase/9.13.0/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/9.13.0/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/9.13.0/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/9.13.0/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/9.13.0/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/9.13.0/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/9.13.0/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/9.13.0/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/9.13.0/firebase-performance-compat.js"></script>
     <!-- 
       initialize the SDK after all desired features are loaded, set useEmulator to false
       to avoid connecting the SDK to running emulators.
@@ -26,69 +26,13 @@
     <!-- index.html 적용-->
     <link rel="stylesheet" href="./CSS/style.css">
 
-    <!-- <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style> -->
   </head>
+
   <body>
-    <!-- <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+    <!-- 고유한것 : id -->
+    <!-- 겹치는것 : class -->
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script> -->
-    
+    <!-- 상단 메뉴바 -->
     <header class="container">
       <div class="home">New Earth</div>
       <!-- env : environment -->
@@ -103,9 +47,6 @@
           <div id="login" class="item">로그인</div>
       </nav>
   </header>
-
-  <!-- 고유한것 : id -->
-  <!-- 겹치는것 : class -->
 
   <!-- 환경일지 -->
   <div id="page_env_record" style="display: none;">
@@ -166,221 +107,50 @@
           <div class="location_env_todo item">to do list</div>
       </aside>
       <section id="content_env_todo">
-          <article>  
-              <fieldset id="check_list">
-                  <legend id="content_env_todo_title">To Do List</legend>
+        <article>  
+          <fieldset id="check_list">
+              <legend id="content_env_todo_title">To Do List</legend>
 
-                  <div>
-                    <input type="checkbox" id="checkbox_check1" name="check1">
-                    <label for="checkbox_check1"></label>
-                    <input type="text" placeholder="(예시)텀블러 사용하기!" id="checkbox_text1" name="text1">
-                    <label for="checkbox_text1"></label>
-                  </div>
+              <div>
+                <input type="checkbox" id="checkbox_check1" name="check1">
+                <label for="checkbox_check1"></label>
+                <input type="text" placeholder="(예시)텀블러 사용하기!" id="checkbox_text1" name="text1">
+                <label for="checkbox_text1"></label>
+              </div>
 
-                  <div>
-                      <input type="checkbox" id="checkbox_check2" name="check2">
-                      <label for="checkbox_check2"></label>
-                      <input type="text" placeholder="(예시)일회용 사용하지 않기!" id="checkbox_text2" name="text2">
-                      <label for="checkbox_text2"></label>
-                  </div>
-                  <div>
-                    <input type="checkbox" id="checkbox_check3" name="check3">
-                    <label for="checkbox_check3"></label>
-                    <input type="text" placeholder="(예시)나갈 때 불 끄기!" id="checkbox_text3" name="text3">
-                    <label for="checkbox_text3"></label>
-                  </div>
-                  <div>
-                      <input type="checkbox" id="checkbox_check4" name="check4">
-                      <label for="checkbox_check4"></label>
-                      <input type="text" placeholder="입력해주세요!" id="checkbox_text4" name="text4">
-                      <label for="checkbox_text4"></label>
-                    </div>
-                    <div>
-                      <input type="checkbox" id="checkbox_check5" name="check3">
-                      <label for="checkbox_check5"></label>
-                      <input type="text" placeholder="입력해주세요!" id="checkbox_text5" name="text5">
-                      <label for="checkbox_text5"></label>
-                    </div>
-              </fieldset>
-
-              <div></div>                    <!-- <img src="/imgs/seed1.png" width="100px" height="100px">
-                  <div style="background-image: url(/imgs/seed1.png);">abc</div> -->
-              </article>
+              <div>
+                  <input type="checkbox" id="checkbox_check2" name="check2">
+                  <label for="checkbox_check2"></label>
+                  <input type="text" placeholder="(예시)일회용 사용하지 않기!" id="checkbox_text2" name="text2">
+                  <label for="checkbox_text2"></label>
+              </div>
+              <div>
+                <input type="checkbox" id="checkbox_check3" name="check3">
+                <label for="checkbox_check3"></label>
+                <input type="text" placeholder="(예시)나갈 때 불 끄기!" id="checkbox_text3" name="text3">
+                <label for="checkbox_text3"></label>
+              </div>
+              <div>
+                  <input type="checkbox" id="checkbox_check4" name="check4">
+                  <label for="checkbox_check4"></label>
+                  <input type="text" placeholder="입력해주세요!" id="checkbox_text4" name="text4">
+                  <label for="checkbox_text4"></label>
+                </div>
+                <div>
+                  <input type="checkbox" id="checkbox_check5" name="check3">
+                  <label for="checkbox_check5"></label>
+                  <input type="text" placeholder="입력해주세요!" id="checkbox_text5" name="text5">
+                  <label for="checkbox_text5"></label>
+                </div>
+          </fieldset>
+        </article>
       </section>
   </div>
 
+  <script src="firebase.js"></script>
   <script src="main.js"></script>
   <script src="function.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-  </script>
-
-  <script type="module">
-
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js";
-    // import "../firebase/database";
-    //import { getDatabase } from "https://newearth-d4cf8-default-rtdb.asia-southeast1.firebasedatabase.app";
-
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
-    
-
-    import { 
-        getAuth,// authentication 설정
-        signInWithPopup, //google 로그인을 팝업창에 띄우기 위해
-        GoogleAuthProvider, //google login 기능
-        signInWithEmailAndPassword,// email 로그인
-        createUserWithEmailAndPassword, //email 회원가입
-    } from 'https://www.gstatic.com/firebasejs/9.2.0/firebase-auth.js';
-
-
-    // Your web app's Firebase configuration
-    const firebaseConfig = {
-      apiKey: "AIzaSyB0aVjJBd6RFk5HnYUkanSP3yq2tbZcbbA",
-      authDomain: "newearth-53c7f.firebaseapp.com",
-      databaseURL: "https://newearth-d4cf8-default-rtdb.asia-southeast1.firebasedatabase.app",
-      projectId: "newearth-53c7f",
-      storageBucket: "newearth-53c7f.appspot.com",
-      messagingSenderId: "66430526425",
-      appId: "1:66430526425:web:efd6c51ac3a5001d976fc8",
-      // The value of `databaseURL` depends on the location of the database
-      //databaseURL: "https://newearth-53c7f.firebaseio.com",
-    };
-
-
-
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-
-    // firebase의 인증객체를 받아둘 객체
-    const auth = firebase.auth();
-    // authoProvider를 GoogleAuthProvider를 이용한다.
-    var provider = new firebase.auth.GoogleAuthProvider();
-    //signInWithPopup(authProvider);
-
-    auth
-      .signInWithPopup(provider)
-      .then((result) => {
-        /** @type {firebase.auth.OAuthCredential} */
-        var credential = result.credential;
-
-        // This gives you a Google Access Token. You can use it to access the Google API.
-        var token = credential.accessToken;
-        // The signed-in user info.
-        var user = result.user;
-        // ...
-        console.log('success');
-        console.log(user);
-        console.log(user.uid);
-        // userInfo = user;
-        get_memo_list();
-        console.log(data);
-        
-      
-      })
-      .catch((error) => {
-        // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        // The email of the user's account used.
-        var email = error.email;
-        // The firebase.auth.AuthCredential type that was used.
-        var credential = error.credential;
-        // ...
-      });
-
-      //DB
-      //DB 초기화
-      const database = firebase.database();
-
-      function get_memo_list(){
-        var memoRef = database.ref('memos/' + user.uid); //memos에 아까 인증된 uid를 가져오겠다.
-        //비동기식, callback으로 data를 받아온다.
-        memoRef.on('child_added', function(data){
-          console.log(data)
-        }); 
-        /*
-        {
-          memos : {
-            uid : { text: '텍스트', 작성일: '작성일', 제목: '제목'},
-            uid : { text: '텍스트', 작성일: '작성일', 제목: '제목'},
-            uid : { text: '텍스트', 작성일: '작성일', 제목: '제목'}
-          }
-        }
-        */
-      }
-
-      //
-      // auth
-      // .onAuthStateChanged(function(user) {
-      //   if (user) {
-      //     //인증 성공부
-      //     //User is signed in
-      //     //var uid = user.uid;
-      //     console.log("success");
-      //     console.log(user);    
-      //     //메모리스트 출력
-      //     userInfo = user; //userInfo에 user데이터 담아두기
-      //     get_memo_list();
-      //   }else{
-      //     //인증 실패부
-      //     //User is sined out
-      //     //구글 인증창 다시 출력
-      //     auth.signInWithPopup(provider);
-      //   }
-      //   }
-      // );
-  
-
-      
-      // const user = firebase.auth().currentUser;
-
-      //   if (user !== null) {
-      //     // User is signed in, see docs for a list of available properties
-      //     // https://firebase.google.com/docs/reference/js/firebase.User
-      //     // ...
-      //     // The user object has basic properties such as display name, email, etc.
-      //       const displayName = user.displayName;
-      //       const email = user.email;
-      //       const photoURL = user.photoURL;
-      //       const emailVerified = user.emailVerified;
-
-      //       // The user's ID, unique to the Firebase project. Do NOT use
-      //       // this value to authenticate with your backend server, if
-      //       // you have one. Use User.getIdToken() instead.
-      //       const uid = user.uid;
-      //   } else {
-      //     // No user is signed in.
-      //   }
-
-    // // 팝업 형태로 넣을 것이다.
-    // signInWithPopup(authProvider);
-
-
-
-    /**
-     * Cloud firebase
-     */
-    //  import firebase from "firebase/app";
-    //   import "firebase/database";
-
-    //   // TODO: Replace the following with your app's Firebase project configuration
-    //   // See: https://firebase.google.com/docs/web/learn-more#config-object
-    //   const firebaseConfig = {
-    //     // ...
-    //     // The value of `databaseURL` depends on the location of the database
-    //     databaseURL: "https://DATABASE_NAME.firebaseio.com",
-    //   };
-
-    //   // Initialize Firebase
-    //   firebase.initializeApp(firebaseConfig);
-
-
-    //   // Initialize Realtime Database and get a reference to the service
-
-      
-      </script>
 
   </body>
 </html>

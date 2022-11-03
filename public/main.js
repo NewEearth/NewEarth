@@ -56,6 +56,8 @@ for(const el of location_env_todo){
 // }
 // var arr = 90;
 // arr[0] = 'seed1';
+
+/*
 var seedlist = new Array(30);
 var seedImg = '<img src="/imgs/seed1.png">';
 for (var i=0; i<seedlist.length; i++){
@@ -65,3 +67,4 @@ for (var i=0; i<seedlist.length; i++){
 seed1.addEventListener("click", () =>{
     document.getElementById("page_env_todo").style.display="inline"
 })
+*/
