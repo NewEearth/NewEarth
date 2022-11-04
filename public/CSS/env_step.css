@@ -1,0 +1,11 @@
+/** 환경발자국 */
+#content_env_step{
+    background-image: url(/imgs/ground1.jpg);
+}
+#seed1{
+    display: absolute;
+    background-image: url(/imgs/seed1.png);
+    width: 50px;
+    height: 50px;
+    border: 10px solid black;
+}

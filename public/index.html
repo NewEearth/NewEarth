@@ -87,6 +87,20 @@
           <div class="location_env_step item">환경발자국</div>
           <div class="location_env_todo item">to do list</div>
       </aside>
+      <section id="content_env_step">
+        <article id="seed1">    
+            <img src="/imgs/seed1.png" width="100px" height="100px">                  <!-- 
+                <div style="background-image: url(/imgs/seed1.png);">abc</div> -->
+        </article>
+        <article id="seed2">    
+            <img src="/imgs/seed1.png" width="100px" height="100px">                  <!-- 
+                <div style="background-image: url(/imgs/seed1.png);">abc</div> -->
+        </article>
+        <article id="seed3">    
+            <img src="/imgs/seed1.png" width="100px" height="100px">                  <!-- 
+                <div style="background-image: url(/imgs/seed1.png);">abc</div> -->
+        </article>
+    </section>
   </div>
 
   <!-- todo -->
@@ -95,6 +109,45 @@
           <div class="location_env_step item">환경발자국</div>
           <div class="location_env_todo item">to do list</div>
       </aside>
+      <section id="content_env_todo">
+        <article>  
+          <fieldset id="check_list">
+              <legend id="content_env_todo_title">To Do List</legend>
+
+              <div>
+                <input type="checkbox" id="checkbox_check1" name="check1">
+                <label for="checkbox_check1"></label>
+                <input type="text" placeholder="(예시)텀블러 사용하기!" id="checkbox_text1" name="text1">
+                <label for="checkbox_text1"></label>
+              </div>
+
+              <div>
+                  <input type="checkbox" id="checkbox_check2" name="check2">
+                  <label for="checkbox_check2"></label>
+                  <input type="text" placeholder="(예시)일회용 사용하지 않기!" id="checkbox_text2" name="text2">
+                  <label for="checkbox_text2"></label>
+              </div>
+              <div>
+                <input type="checkbox" id="checkbox_check3" name="check3">
+                <label for="checkbox_check3"></label>
+                <input type="text" placeholder="(예시)나갈 때 불 끄기!" id="checkbox_text3" name="text3">
+                <label for="checkbox_text3"></label>
+              </div>
+              <div>
+                  <input type="checkbox" id="checkbox_check4" name="check4">
+                  <label for="checkbox_check4"></label>
+                  <input type="text" placeholder="입력해주세요!" id="checkbox_text4" name="text4">
+                  <label for="checkbox_text4"></label>
+                </div>
+                <div>
+                  <input type="checkbox" id="checkbox_check5" name="check3">
+                  <label for="checkbox_check5"></label>
+                  <input type="text" placeholder="입력해주세요!" id="checkbox_text5" name="text5">
+                  <label for="checkbox_text5"></label>
+                </div>
+          </fieldset>
+        </article>
+      </section>
   </div>
 
   <script type="module" src="firebase.js"></script>
