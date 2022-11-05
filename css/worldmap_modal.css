@@ -1,0 +1,25 @@
+.modal {
+  height: 500px;
+  width: 1000px;
+  z-index: 5;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  margin: 20px;
+  border-radius: 3px;
+  padding: 20px 20px 20px 20px;
+  display: none;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.modal .modal_close {
+  width: 10px;
+  height: 10px;
+  z-index: 6;
+  position: absolute;
+  color: black;
+  right: 20px;
+  cursor: pointer;
+}
