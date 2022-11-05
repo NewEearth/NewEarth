@@ -21,8 +21,6 @@ body {
 
 
 
-
-
 #logo {
   position: fixed;
   top: -20px;
@@ -58,7 +56,4 @@ body {
 
 
 
-.smallboldfont {
-  font-size: 15px;
-  font-weight: bold;
-}
+
