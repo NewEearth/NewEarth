@@ -88,18 +88,15 @@
           <div class="location_env_todo item">to do list</div>
       </aside>
       <section id="content_env_step">
-        <article id="seed1">    
-            <img src="/imgs/seed1.png" width="100px" height="100px">                  <!-- 
-                <div style="background-image: url(/imgs/seed1.png);">abc</div> -->
-        </article>
-        <article id="seed2">    
-            <img src="/imgs/seed1.png" width="100px" height="100px">                  <!-- 
-                <div style="background-image: url(/imgs/seed1.png);">abc</div> -->
+        <!-- <article id="seed">    
+            <img src="/imgs/seed.png" width="150px" height="150px">                  
+        </article> -->
+        <!-- <article id="seed2">    
+            <img src="/imgs/sprout.png" width="150px" height="150px">                  
         </article>
         <article id="seed3">    
-            <img src="/imgs/seed1.png" width="100px" height="100px">                  <!-- 
-                <div style="background-image: url(/imgs/seed1.png);">abc</div> -->
-        </article>
+            <img src="/imgs/stem.png" width="150px" height="150px">                  
+        </article> -->
     </section>
   </div>
 
@@ -117,33 +114,37 @@
               <div>
                 <input type="checkbox" id="checkbox_check1" name="check1">
                 <label for="checkbox_check1"></label>
-                <input type="text" placeholder="(예시)텀블러 사용하기!" id="checkbox_text1" name="text1">
+                <input type="text" placeholder="(예시)텀블러 사용하기!" id="checkbox_text1" name="text1" required>
                 <label for="checkbox_text1"></label>
               </div>
 
               <div>
                   <input type="checkbox" id="checkbox_check2" name="check2">
                   <label for="checkbox_check2"></label>
-                  <input type="text" placeholder="(예시)일회용 사용하지 않기!" id="checkbox_text2" name="text2">
+                  <input type="text" placeholder="(예시)일회용 사용하지 않기!" id="checkbox_text2" name="text2" required>
                   <label for="checkbox_text2"></label>
               </div>
               <div>
                 <input type="checkbox" id="checkbox_check3" name="check3">
                 <label for="checkbox_check3"></label>
-                <input type="text" placeholder="(예시)나갈 때 불 끄기!" id="checkbox_text3" name="text3">
+                <input type="text" placeholder="(예시)나갈 때 불 끄기!" id="checkbox_text3" name="text3" required>
                 <label for="checkbox_text3"></label>
               </div>
               <div>
                   <input type="checkbox" id="checkbox_check4" name="check4">
                   <label for="checkbox_check4"></label>
-                  <input type="text" placeholder="입력해주세요!" id="checkbox_text4" name="text4">
+                  <input type="text" placeholder="입력해주세요!" id="checkbox_text4" name="text4" required>
                   <label for="checkbox_text4"></label>
                 </div>
                 <div>
                   <input type="checkbox" id="checkbox_check5" name="check3">
                   <label for="checkbox_check5"></label>
-                  <input type="text" placeholder="입력해주세요!" id="checkbox_text5" name="text5">
+                  <input type="text" placeholder="입력해주세요!" id="checkbox_text5" name="text5" required>
                   <label for="checkbox_text5"></label>
+                </div>
+
+                <div id="enter_Button" class="enter_Button">
+                    <button type="submit">등록</button>
                 </div>
           </fieldset>
         </article>
@@ -152,7 +153,7 @@
 
   <script type="module" src="firebase.js"></script>
   <script src="main.js"></script>
-  <script src="function.js"></script>
+  <script src="content_env_step.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
   </body>

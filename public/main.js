@@ -4,9 +4,9 @@ const location_env_protect_record = document.querySelectorAll(".location_env_pro
 const location_env_step = document.querySelectorAll(".location_env_step");
 /** location */
 const location_env_todo = document.querySelectorAll(".location_env_todo");
-const seed1= document.getElementById("seed1");
+//const seed1= document.getElementById("seed1");
 /** seed */
-const seed = document.querySelectorAll(".seed");
+//const seed = document.querySelectorAll(".seed");
 /** 환경일지 */
 for(const el of location_env_record){
     el.addEventListener("click", ()=>{

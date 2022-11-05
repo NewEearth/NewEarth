@@ -2,6 +2,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
+import "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js";
 
 import { 
     getAuth,// authentication 설정
@@ -61,3 +62,13 @@ auth
     var credential = error.credential;
     // ...
 });
+
+
+// Initialize Cloud Firestore and get a reference to the service
+//Database에서 데이터 가져오기
+const db = firebase.firestore();
+
+//Todolist data 저장
+document.getElementById("enter_Button").addEventListener('click', () => {
+    db.collection('TodoList').add({checkbox_text1: $('#checkbox_text1').val(), checkbox_text2: $('#checkbox_text2').val(), checkbox_text3: $('#checkbox_text3').val(), checkbox_text4: $('#checkbox_text4').val(), checkbox_text5: $('#checkbox_text5').val()})
+  });
