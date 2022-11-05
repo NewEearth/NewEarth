@@ -70,5 +70,5 @@ const db = firebase.firestore();
 
 //Todolist data 저장
 document.getElementById("enter_Button").addEventListener('click', () => {
-    db.collection('TodoList').add({checkbox_text1: $('#checkbox_text1').val(), checkbox_text2: $('#checkbox_text2').val(), checkbox_text3: $('#checkbox_text3').val(), checkbox_text4: $('#checkbox_text4').val(), checkbox_text5: $('#checkbox_text5').val()})
+    db.collection('TodoList').add({Date: $('#content_env_todo_title').val(), checkbox_text1: $('#checkbox_text1').val(), checkbox_text2: $('#checkbox_text2').val(), checkbox_text3: $('#checkbox_text3').val(), checkbox_text4: $('#checkbox_text4').val(), checkbox_text5: $('#checkbox_text5').val()})
   });
