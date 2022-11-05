@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>환경보호방법작성</title>
+  <link rel="stylesheet" href="./CSS/communityUI_환경보호방법작성.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+HK:wght@300&display=swap');
+  </style>
+</head>
+<body>
+  <header class="container">
+    <div class="home">
+      <a href="index.html" onclick="location.href='communityUI_환경보호방법작성.html'"><img src="/public/imgs/logoimg.png"></a>
+    </div>
+    <!-- env : environment -->
+    <nav class="top_list">
+        <div class="item"><a href="communityUI_환경일지목록.html" onclick="location.href='communityUI_환경보호방법작성.html'">환경일지</a></div>
+        <div class="item">환경보호방법</div>
+        <div class="item">환경발자국</div>
+    </nav>
+    <!-- right -->
+    <nav class="top_list_2">
+      <div class="home_button">
+        <img src="/public/imgs/지구 이미지.png">
+      </div>
+              <!--<div class="item login">로그인</div>-->
+
+    </nav>
+</header>
+<aside class="left_list">
+    <div class="item"><a href="communityUI_환경일지목록.html" onclick="location.href='communityUI_환경보호방법작성.html'">환경일지</a></div>
+    <div class="item">환경보호방법</div>
+</aside>
+
+<header class="env_way">
+  <div class="env_writes">환경보호방법 작성</div>
+  <form method ="post" enctype="multipart/form-data">
+  <div class="env_date">날짜
+    <input type="date">
+  </div>
+  <div>
+    <div class="env_container">
+      <div class="env_title">제목</div>
+      <br>
+      <textarea name="titles" placeholder="제목을 입력해주세요"  style="resize:none;">
+      </textarea>
+      <!--
+      <input type="text" placeholder="제목" id="log_title">
+      <label for="log_title"></label>-->
+    </div>
+
+    <div class="env_container2">
+      <div class="env_contents">내용</div>
+      <br>
+      <textarea name="contents" placeholder="내용을 입력해주세요" style="resize:none;">
+      </textarea>
+      <!--<input type="text" placeholder="내용" id="log_contents" cols="40">
+      <label for="log_contents"></label>-->
+    </div>
+
+    <div class="env_container_3">
+      <div class="env_image_add">이미지 추가</div>       
+      <br>
+      <div class="env_images">
+        <input type="file" id="env_images">
+        <label for="env_images"></label>
+      </div>     
+    </div>
+
+    <div class="env_container4">
+      <div class="env_enter"><button onclick="">등록하기</button></div>
+      <div class="env_lists"><a href="communityUI_환경보호방법목록.html" onclick="location.href='communityUI_환경보호방법작성.html'">목록</button></a></div>
+    </div>
+    </header>
+</body>
+</html>

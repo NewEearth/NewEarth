@@ -4,6 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>NewEarth</title>
+    <link rel="stylesheet" href="./CSS/communityUI_main.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+HK:wght@300&display=swap');
+    </style>
 
     <!-- update the version number as needed -->
     <script defer src="/__/firebase/9.13.0/firebase-app-compat.js"></script>
@@ -24,78 +29,48 @@
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
 
     <!-- index.html 적용-->
-    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/communityUI_main.css">
 
   </head>
 
   <body>
-    <!-- 고유한것 : id -->
-    <!-- 겹치는것 : class -->
-
-    <!-- 상단 메뉴바 -->
     <header class="container">
-      <div class="home">New Earth</div>
-      <!-- env : environment -->
-      <nav class="top_list">
-          <div class="location_env_record item">환경일지</div>
-          <div class="location_env_protect_record item">환경보호방법</div>
-          <div class="location_env_step item">환경발자국</div>
-      </nav>
-      <!-- right -->
-      <nav class="top_list_2">
-          <div id="main" class="item">지구이미지</div>
-      </nav>
-  </header>
+        <div class="home">
+            <img src="/public/imgs/logoimg.png">
+        </div>
+        <!-- env : environment -->
+        <nav class="top_list">
+            <div class="item"><a href="communityUI_환경일지목록.html" onclick="location.href='index.html'">환경일지</a></div>
+            <div class="item"><a href="communityUI_환경보호방법목록.html" onclick="location.href='index.html'">환경보호방법</a></div>
+            <div class="item">환경발자국</div>
+        </nav>
+        <!-- right -->
+        <nav class="top_list_2">
+            <div class="home_button">
+                <img src="/public/imgs/지구 이미지.png">
+            </div>
+            <!--<div class="item login">로그인</div>-->
 
-  <!-- 환경일지 -->
-  <div id="page_env_record" style="display: none;">
-      <aside class="left_list">
-          <div class="location_env_record item">환경일지</div>
-          <div class="item">일지작성</div>
-      </aside>
-      <section id="content_env_record">
-          <article>
-              <!-- <header class="env_record">환경일지</header>
-                  <div class="env_record_list">환경일지1</div>
-                  <div class="env_record_list">환경일지2</div> 
-                환경일지 여기에 작업해주세요! (위는 그냥 참고용)
-                일지작성과 환경일지 간에 화면전환이 필요합니다. 되도록 새 html파일 만들지 말고 작업해주세요-->
-          </article>
-      </section>
-  </div>
-
-  <!-- 환경보호방법 -->
-  <div id="page_env_protect_record" style="display: none;">
-      <aside class="left_list">
-          <div class="location_env_record item">환경보호방법</div>
-          <div class="item">환경보호방법 작성</div>
-      </aside>
-      <section id="content_env_protect_record">
-          <article>
-              <!-- <header class="env_record">환경일지</header>
-                  <div class="env_record_list">환경일지1</div>
-                  <div class="env_record_list">환경일지2</div>
-                환경보호 방법 여기에 작업해주세요! (위는 그냥 참고용)
-                환경보호방법과 환경보호방법작성 간에 화면전환이 필요합니다. 되도록 새 html파일 만들지 말고 작업해주세요-->
-          </article>
-      </section>
-  </div>
-
-  <!-- 환경발자국 -->
-  <div id="page_env_step" style="display: none;">
-      <aside class="left_list">
-          <div class="location_env_step item">환경발자국</div>
-          <div class="location_env_todo item">to do list</div>
-      </aside>
-  </div>
-
-  <!-- todo -->
-  <div id="page_env_todo" style="display: none;">
-      <aside class="left_list">
-          <div class="location_env_step item">환경발자국</div>
-          <div class="location_env_todo item">to do list</div>
-      </aside>
-  </div>
+        </nav>
+    </header>
+    <aside class="left_list">
+        <div class="item"><a href="communityUI_환경일지목록.html" onclick="location.href='index.html'">환경일지</a></div>
+        <div class="item"><a href="communityUI_환경보호방법목록.html" onclick="location.href='index.html'">환경보호방법</a></div>
+    </aside>
+<!-- main -->
+    <section class="screen2">
+        
+        <article>
+            <div class="env_grid3">
+                <div class="main_images">image</div>
+                <div class="main_title">지구를 지키자</div>
+                <div class="main_autor">지은이</div>
+                <div class="main_env_heart main_heart_btn"></div>            
+                   
+            </div>
+        </article>
+    </section>
+    
 
   <script type="module" src="firebase.js"></script>
   <script src="main.js"></script>
