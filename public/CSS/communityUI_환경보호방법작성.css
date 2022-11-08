@@ -108,7 +108,7 @@ a {
   font-size:1.3em;
 }
 
-.log_date>input[type="date"]{
+.env_date2{
   position:absolute;
   height:30px;
   margin-left:20px;
@@ -155,7 +155,7 @@ a {
 }
 */
 
-.env_container>textarea[name="titles"]{
+.env_enter_title{
   display:absolute;
   height:30px;
   line-height:normal;
@@ -198,7 +198,7 @@ a {
 }
 */
 
-.env_container2>textarea[name="contents"]{
+.env_enter_contents{
   display:inline-block;
   line-height:normal;
   margin-top:30px;
@@ -210,6 +210,7 @@ a {
   opacity: 0.8;
   border-radius:10px;
 }
+
 /*이미지*/
 .env_container3{
   position:absolute;

@@ -154,7 +154,7 @@ a {
 }
 */
 
-.log_container>textarea[name="titles"]{
+.log_title_enter{
   display:absolute;
   height:30px;
   line-height:normal;
@@ -197,7 +197,7 @@ a {
 }
 */
 
-.log_container2>textarea[name="contents"]{
+.log_contents_enter{
   display:inline-block;
   line-height:normal;
   margin-top:30px;

@@ -7,16 +7,50 @@
   <title>환경일지작성</title>
   <link rel="stylesheet" href="./CSS/communityUI_일지작성.css">
 
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+HK:wght@300&display=swap');
-</style>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+HK:wght@300&display=swap');
+  </style>
+
+  <!-- update the version number as needed -->
+  <script defer src="/__/firebase/9.13.0/firebase-app-compat.js"></script>
+  <!-- include only the Firebase features as you need -->
+  <script defer src="/__/firebase/9.13.0/firebase-auth-compat.js"></script>
+  <script defer src="/__/firebase/9.13.0/firebase-database-compat.js"></script>
+  <script defer src="/__/firebase/9.13.0/firebase-firestore-compat.js"></script>
+  <script defer src="/__/firebase/9.13.0/firebase-functions-compat.js"></script>
+  <script defer src="/__/firebase/9.13.0/firebase-messaging-compat.js"></script>
+  <script defer src="/__/firebase/9.13.0/firebase-storage-compat.js"></script>
+  <script defer src="/__/firebase/9.13.0/firebase-analytics-compat.js"></script>
+  <script defer src="/__/firebase/9.13.0/firebase-remote-config-compat.js"></script>
+  <script defer src="/__/firebase/9.13.0/firebase-performance-compat.js"></script>
+  <!-- 
+    initialize the SDK after all desired features are loaded, set useEmulator to false
+    to avoid connecting the SDK to running emulators.
+  -->
+  <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+  
+    <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyA1IhyMtiCyPjCzgvwI7prkD9QK9NjIHas",
+      authDomain: "newearth-b3659.firebaseapp.com",
+      projectId: "newearth-b3659",
+      storageBucket: "newearth-b3659.appspot.com",
+      messagingSenderId: "109865594723",
+      appId: "1:109865594723:web:576164973901997fdf2d56"
+      };
+
+    // Initialize Firebase
+    const app = firebase.initializeApp(firebaseConfig);
+  </script>
+  
   
 </head>
 <body>
   <header class="container">
     <div class="home">
-    <a href="index.html" onclick="location.href='communityUI_환경일지작성.html'"><img src="/public/imgs/logoimg.png"></a>
+    <a href="index.html" onclick="location.href='communityUI_환경일지작성.html'"><img src="https://firebasestorage.googleapis.com/v0/b/newearth-b3659.appspot.com/o/logoimg.png?alt=media&token=a7173598-5c5f-4586-b00f-8886c31d264d"></a>
     </div>
     <!-- env : environment -->
     <nav class="top_list">
@@ -27,7 +61,7 @@
     <!-- right -->
     <nav class="top_list_2">
         <div class="home_button">
-          <img src="/public/imgs/지구 이미지.png">
+          <img src="https://firebasestorage.googleapis.com/v0/b/newearth-b3659.appspot.com/o/%EC%A7%80%EA%B5%AC%20%EC%9D%B4%EB%AF%B8%EC%A7%80.png?alt=media&token=e9f565c6-660b-4d0c-8f74-bc15e48fbd56">
         </div>
         <!--<div class="item login">로그아웃</div>-->
     </nav>
@@ -42,13 +76,13 @@
     <form method ="post" enctype="multipart/form-data">
       <!--<filedset></filedset>-->
       <div class="log_date">날짜
-        <input type="date">
+        <input type="date" class="log_date2">
       </div>
 
       <div class="log_container">
         <div class="log_title">제목</div>
         <br>
-        <textarea name="titles" placeholder="제목을 입력해주세요"  style="resize:none;">
+        <textarea name="titles" placeholder="제목을 입력해주세요"  style="resize:none;" class="log_title_enter">
         </textarea>
         <!--
         <input type="text" placeholder="제목" id="log_title">
@@ -58,7 +92,7 @@
       <div class="log_container2">
         <div class="log_contents">내용</div>
         <br>
-        <textarea name="contents" placeholder="내용을 입력해주세요" style="resize:none;">
+        <textarea name="contents" placeholder="내용을 입력해주세요" style="resize:none;" class="log_contents_enter">
         </textarea>
         <!--<input type="text" placeholder="내용" id="log_contents" cols="40">
         <label for="log_contents"></label>-->
@@ -68,16 +102,38 @@
         <div class="log_image_add">이미지 추가</div>       
         <br>
         <div class="log_images">
-          <input type="file" id="log_images">
+          <input type="file" id="log_images" class="log_imges2">
           <label for="log_images"></label>
         </div>    
       </div>
 
       <div class="log_container4">
-        <div class="log_enter"><button onclick="">등록하기</button></div>
+        <div class="log_enter">
+          <button onclick="" class="log_enter2">등록하기</button>
+        </div>
         <div class="log_lists"><a href="communityUI_환경일지목록.html" onclick="location.href='communityUI_환경일지작성.html'">목록</a></div>
       </div>
     </form>
   </div>
+
+
+<!--게시글 업로드-->
+<script>
+  const db=firebase.firestore();
+  const storage=firebase.storage();
+
+  db.collection('community').add({제목:'변기'})
+
+  $('#send').click(function(){
+    var file=document.querySelector('log_imges2').files[0]
+    var storageRef=storage.ref();
+    var 저장할경로=storageRef.child('image/'+file.name);
+    var 업로드작업=저장할경로.put(file)
+  }
+  )
+
+
+
+  </script>
 </body>
 </html>
