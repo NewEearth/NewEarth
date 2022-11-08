@@ -100,6 +100,7 @@
     </section>
   </div>
 
+  
   <!-- todo -->
   <div id="page_env_todo" style="display: none;">
       <aside class="left_list">
@@ -110,51 +111,35 @@
         <article>  
           <fieldset id="check_list">
               <legend id="content_env_todo_title">To Do List</legend>
-
+              
               <div>
-                <input type="checkbox" id="checkbox_check1" name="check1">
-                <label for="checkbox_check1"></label>
-                <input type="text" placeholder="(예시)텀블러 사용하기!" id="checkbox_text1" name="text1" required>
+                <input type="text" placeholder="Todo 1 : (예시)텀블러 사용하기" id="checkbox_text1" name="text1" required>
                 <label for="checkbox_text1"></label>
               </div>
 
               <div>
-                  <input type="checkbox" id="checkbox_check2" name="check2">
-                  <label for="checkbox_check2"></label>
-                  <input type="text" placeholder="(예시)일회용 사용하지 않기!" id="checkbox_text2" name="text2" required>
+                  <input type="text" placeholder="Todo 2 : (예시)나갈 때 불 끄기" id="checkbox_text2" name="text2" required>
                   <label for="checkbox_text2"></label>
               </div>
               <div>
-                <input type="checkbox" id="checkbox_check3" name="check3">
-                <label for="checkbox_check3"></label>
-                <input type="text" placeholder="(예시)나갈 때 불 끄기!" id="checkbox_text3" name="text3" required>
+                <input type="text" placeholder="Todo 3 : (예시)일회용품 사용하지 않기" id="checkbox_text3" name="text3" required>
                 <label for="checkbox_text3"></label>
               </div>
-              <div>
-                  <input type="checkbox" id="checkbox_check4" name="check4">
-                  <label for="checkbox_check4"></label>
-                  <input type="text" placeholder="입력해주세요!" id="checkbox_text4" name="text4" required>
-                  <label for="checkbox_text4"></label>
-                </div>
-                <div>
-                  <input type="checkbox" id="checkbox_check5" name="check3">
-                  <label for="checkbox_check5"></label>
-                  <input type="text" placeholder="입력해주세요!" id="checkbox_text5" name="text5" required>
-                  <label for="checkbox_text5"></label>
-                </div>
 
-                <div id="enter_Button" class="enter_Button">
-                    <button type="submit">등록</button>
-                </div>
+              <div id="enter_Button" class="enter_Button">
+                <button type="submit">등록</button>
+            </div>
+                
           </fieldset>
+          
         </article>
       </section>
   </div>
 
-  <script type="module" src="firebase.js"></script>
+  <script type="module" src="firebase2.js"></script>
   <script src="main.js"></script>
   <script src="content_env_step.js"></script>
-  <script src="todolist_env_step.js"></script>
+  <script src="todolist.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
   </body>
