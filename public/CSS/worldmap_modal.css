@@ -1,8 +1,8 @@
 .modal {
   height: 500px;
   width: 1000px;
-  z-index: 5;
-  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 99999;
+  background-color: #BCBCBC;
   position: absolute;
   margin: 20px;
   border-radius: 3px;
@@ -11,7 +11,28 @@
   top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
+  animation-name: modal_ani;
+  animation-duration: 2s;
 }
+
+@keyframes modal_ani{
+  from{
+   opacity: 0;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+
+  }
+
+   to{
+    opacity: 1;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   
+   }
+ }
+
 
 
 .modal .modal_close {

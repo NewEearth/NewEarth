@@ -5,6 +5,8 @@ var btns = document.getElementsByClassName("mark");
 // Modal을 닫는 close 클래스를 가져옵니다.
 var spanes = document.getElementsByClassName("modal_close");
 var funcs = [];
+
+
  
 // Modal을 띄우고 닫는 클릭 이벤트를 정의한 함수
 function Modal(num) {
@@ -13,7 +15,8 @@ function Modal(num) {
     btns[num].onclick =  function() {
         modals[num].style.display = "block";
         console.log(num);
-    };
+
+  };
  
     // <span> 태그(X 버튼)를 클릭하면 Modal이 닫습니다.
     spanes[num].onclick = function() {
