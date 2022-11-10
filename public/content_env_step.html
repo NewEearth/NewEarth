@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>login</title>
+        <title>환경발자국</title>
 
         <!-- update the version number as needed -->
         <script defer src="/__/firebase/9.13.0/firebase-app-compat.js"></script>
@@ -22,10 +22,10 @@
         <!-- index.html 적용-->
         <link rel="stylesheet" href="./CSS/style2.css">
 
+        
     </head>
     <body>
         
-
 
         <!-- 상단 메뉴바 -->
         <header class="container">
@@ -41,7 +41,21 @@
                 <div id="main" class="item">지구이미지</div>
             </nav>
         </header>
-
+        
+        <!-- 환경발자국 -->
+        <div id="page_env_step">
+            <aside class="left_list">
+                <div class="location_env_step item">환경발자국</div>
+                <div class="location_env_todo item">To do list</div>
+            </aside>
+            <section id="content_env_step">
+                <!-- <div class="seed_img">
+                     <img src="./imgs/seed.png" class="seed_img"> 
+                     </div>
+                    -->
+            </section>
+        </div>
+        
         <script type="module">
             // Import the functions you need from the SDKs you need
             import { initializeApp } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js";
@@ -93,7 +107,7 @@
                 console.log(user.uid);
 
                 //화면 전환
-                window.location.href="./content_env_step.html"
+                // window.location.href="./content_env_step.html"
                 // console.log(data);
                 // console.log(auth);
                 
@@ -110,6 +124,8 @@
                 // ...
             });
         </script>
-
+        
+        <script src="./js/content_env_step.js"></script>
+        <!-- <script type="module" src="./js/firebase.js"></script> -->
     </body>
 </html>

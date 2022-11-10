@@ -26,3 +26,11 @@ document.getElementById("content_env_todo_title").innerHTML = today;
 // var a=today.format('yyyymmdd');
 // console.log(a);
 
+//content_env_step로 화면이동
+const location_env_step = document.querySelectorAll(".location_env_step");
+for (const el of location_env_step){
+    el.addEventListener( "click", () => {
+        console.log("환경발자국 페이지로 이동");
+        window.location.href='./content_env_step.html'
+    })
+}
