@@ -13,25 +13,9 @@
     @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+HK:wght@300&display=swap');
   </style>
 
-<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-<!-- update the version number as needed -->
-<script defer src="/__/firebase/9.13.0/firebase-app-compat.js"></script>
-<!-- include only the Firebase features as you need -->
-<script defer src="/__/firebase/9.13.0/firebase-auth-compat.js"></script>
-<script defer src="/__/firebase/9.13.0/firebase-database-compat.js"></script>
-<script defer src="/__/firebase/9.13.0/firebase-firestore-compat.js"></script>
-<script defer src="/__/firebase/9.13.0/firebase-storage-compat.js"></script>
-<!-- 
-  initialize the SDK after all desired features are loaded, set useEmulator to false
-  to avoid connecting the SDK to running emulators.
--->
-<script defer src="/__/firebase/init.js?useEmulator=true"></script>
 
 
 <link rel="stylesheet" href="./CSS/communityUI_환경보호방법목록.css">
-
-
-
 
 </head>
 <body>
@@ -128,7 +112,7 @@
     <nav class="top_list">
         <div class="item"><a href="communityUI_환경일지목록.html" onclick="location.href='communityUI_환경보호방법목록.html'">환경일지</a></div>
         <div class="item">환경보호방법</div>
-        <div class="item"><a href="todolist_env_step.html" onclick="location.href='todolist_env_step.html'">환경발자국</a></div>
+        <div class="item"><a href="content_env_step.html" onclick="location.href='content_env_step.html'">환경발자국</a></div>
     </nav>
     <!-- right -->
     <nav class="top_list_2">
@@ -152,6 +136,20 @@
 <div class="env_writes">
   <a href="communityUI_환경보호방법작성.html" onclick="location.href='communityUI_환경보호방법목록.html'"><button class="env_write_button">작성하기</button></a>
 </div>
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<!-- update the version number as needed -->
+<script defer src="/__/firebase/9.13.0/firebase-app-compat.js"></script>
+<!-- include only the Firebase features as you need -->
+<script defer src="/__/firebase/9.13.0/firebase-auth-compat.js"></script>
+<script defer src="/__/firebase/9.13.0/firebase-database-compat.js"></script>
+<script defer src="/__/firebase/9.13.0/firebase-firestore-compat.js"></script>
+<script defer src="/__/firebase/9.13.0/firebase-storage-compat.js"></script>
+<!-- 
+  initialize the SDK after all desired features are loaded, set useEmulator to false
+  to avoid connecting the SDK to running emulators.
+-->
+<script defer src="/__/firebase/init.js?useEmulator=true"></script>
 
 <script type="module">
   // Your web app's Firebase configuration
@@ -178,7 +176,6 @@ db.collection('env_com').get().then((snapShot) => {
 
       let template=
        `<div class="env_item_list">
-        <a href="communityUI_본글보기.html" onclick="location.href='communityUI_환경보호방법목록.html'">
           <div class="table_env_grid2">
             <div class="table_env_date">${doc.data().date}</div>
               <div class="table_env_image" style="background-image: url('${doc.data().images}')"></div>
@@ -198,6 +195,6 @@ db.collection('env_com').get().then((snapShot) => {
 
 
   </script>
-
+  
 </body>
 </html>
