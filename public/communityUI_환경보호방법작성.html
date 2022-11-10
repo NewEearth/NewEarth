@@ -5,7 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>환경보호방법작성</title>
-  <link rel="stylesheet" href="./CSS/communityUI_환경보호방법작성.css">
+  <link rel="stylesheet" href="/public/star background/star background/star.css">
+
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+HK:wght@300&display=swap');
@@ -32,6 +33,7 @@
 
   <!-- index.html 적용-->
   <link rel="stylesheet" href="./CSS/communityUI_환경보호방법작성.css">
+
   <script type="module">
     // Your web app's Firebase configuration
     // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -80,7 +82,7 @@
 
           }
           console.log(newData);
-            db.collection('community').add(newData).then((result) => {
+            db.collection('env_com').add(newData).then((result) => {
               console.log(result);
               // window.location.href = "./index.html";
             }).catch((err) => {
@@ -96,9 +98,93 @@
   </script>
 </head>
 <body>
+  <div class="container_bubbles">
+    <div class="bubbles">
+      <span style="--i:11;"></span>
+      <span style="--i:12;"></span>
+      <span style="--i:24;"></span>
+      <span style="--i:10;"></span>
+      <span style="--i:14;"></span>
+      <span style="--i:23;"></span>
+      <span style="--i:18;"></span>
+      <span style="--i:16;"></span>
+      <span style="--i:19;"></span>
+      <span style="--i:20;"></span>
+      <span style="--i:22;"></span>
+      <span style="--i:25;"></span>
+      <span style="--i:18;"></span>
+      <span style="--i:21;"></span>
+      <span style="--i:15;"></span>
+      <span style="--i:13;"></span>
+      <span style="--i:26;"></span>
+      <span style="--i:17;"></span>
+      <span style="--i:13;"></span>
+      <span style="--i:28;"></span>
+      <span style="--i:11;"></span>
+      <span style="--i:12;"></span>
+      <span style="--i:24;"></span>
+      <span style="--i:10;"></span>
+      <span style="--i:14;"></span>
+      <span style="--i:23;"></span>
+      <span style="--i:18;"></span>
+      <span style="--i:16;"></span>
+      <span style="--i:19;"></span>
+      <span style="--i:20;"></span>
+      <span style="--i:22;"></span>
+      <span style="--i:25;"></span>
+      <span style="--i:18;"></span>
+      <span style="--i:21;"></span>
+      <span style="--i:15;"></span>
+      <span style="--i:13;"></span>
+      <span style="--i:26;"></span>
+      <span style="--i:17;"></span>
+      <span style="--i:13;"></span>
+      <span style="--i:28;"></span>
+      <span style="--i:11;"></span>
+      <span style="--i:12;"></span>
+      <span style="--i:24;"></span>
+      <span style="--i:10;"></span>
+      <span style="--i:14;"></span>
+      <span style="--i:23;"></span>
+      <span style="--i:18;"></span>
+      <span style="--i:16;"></span>
+      <span style="--i:19;"></span>
+      <span style="--i:20;"></span>
+      <span style="--i:22;"></span>
+      <span style="--i:25;"></span>
+      <span style="--i:18;"></span>
+      <span style="--i:21;"></span>
+      <span style="--i:15;"></span>
+      <span style="--i:13;"></span>
+      <span style="--i:26;"></span>
+      <span style="--i:17;"></span>
+      <span style="--i:13;"></span>
+      <span style="--i:28;"></span>
+      <span style="--i:11;"></span>
+      <span style="--i:12;"></span>
+      <span style="--i:24;"></span>
+      <span style="--i:10;"></span>
+      <span style="--i:14;"></span>
+      <span style="--i:23;"></span>
+      <span style="--i:18;"></span>
+      <span style="--i:16;"></span>
+      <span style="--i:19;"></span>
+      <span style="--i:20;"></span>
+      <span style="--i:22;"></span>
+      <span style="--i:25;"></span>
+      <span style="--i:18;"></span>
+      <span style="--i:21;"></span>
+      <span style="--i:15;"></span>
+      <span style="--i:13;"></span>
+      <span style="--i:26;"></span>
+      <span style="--i:17;"></span>
+      <span style="--i:13;"></span>
+      <span style="--i:28;"></span>
+    </div>
+  </div>
   <header class="container">
-    <div class="home">
-      <a href="index.html" onclick="location.href='communityUI_환경보호방법작성.html'"><img src="https://firebasestorage.googleapis.com/v0/b/newearth-b3659.appspot.com/o/logoimg.png?alt=media&token=a7173598-5c5f-4586-b00f-8886c31d264d"></a>
+    <div class="logo">
+      <img src="https://firebasestorage.googleapis.com/v0/b/newearth-b3659.appspot.com/o/logoimg.png?alt=media&token=a7173598-5c5f-4586-b00f-8886c31d264d"></a>
     </div>
     <!-- env : environment -->
     <nav class="top_list">
@@ -120,9 +206,9 @@
     <div class="item">환경보호방법</div>
 </aside>
 
-<header class="env_way">
+<div class="env_way">
   <div class="env_writes">환경보호방법 작성</div>
-  <form method ="post" enctype="multipart/form-data">
+
   <div class="env_date">날짜
     <input class="env_date2" type="date">
   </div>
@@ -156,10 +242,10 @@
     </div>
 
     <div class="env_container4">
-      <div class="env_enter"><button id="send" class="env_enter2">등록하기</button></div>
+      <div class="env_enter"><button id="send">등록하기</button></div>
       <div class="env_lists"><a href="communityUI_환경보호방법목록.html" onclick="location.href='communityUI_환경보호방법작성.html'">목록</a></div>
     </div>
-  </header>
+  </div>
   <script type="module" src="firebase.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </body>
