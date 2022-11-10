@@ -1,3 +1,5 @@
+// const { consoleOrigin } = require("firebase-tools/lib/api");
+
 var date = new Date();
 var days = new Date(date.getFullYear(), date.getMonth() +1, 0).getDate();
 // var lastDate = new Date(year, month, 0).getDate();

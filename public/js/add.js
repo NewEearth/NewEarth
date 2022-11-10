@@ -70,7 +70,4 @@
 // document.getElementById("enter_Button").addEventListener('click', () => {
 //     db.collection('TodoList').add({Date: $('#content_env_todo_title').val(), checkbox_text1: $('#checkbox_text1').val(), checkbox_text2: $('#checkbox_text2').val(), checkbox_text3: $('#checkbox_text3').val()})
 //   });
-//Todolist data 저장
-document.getElementById("enter_Button").addEventListener('click', () => {
-    db.collection('TodoList').add({Day: day, Date: today, checkbox_text1: $('#checkbox_text1').val(), checkbox_text2: $('#checkbox_text2').val(), checkbox_text3: $('#checkbox_text3').val()})
-    });
+
