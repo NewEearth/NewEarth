@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>환경일지 목록</title>
+  <link rel="stylesheet" href="./CSS/communityUI_환경일지목록.css">
+  <link rel="stylesheet" href="/public/star background/star background/star.css">
+
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+HK:wght@300&display=swap');
+  </style>
+
+<script type="module" src="firebase.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<!-- update the version number as needed -->
+<script defer src="/__/firebase/9.13.0/firebase-app-compat.js"></script>
+<!-- include only the Firebase features as you need -->
+<script defer src="/__/firebase/9.13.0/firebase-auth-compat.js"></script>
+<script defer src="/__/firebase/9.13.0/firebase-database-compat.js"></script>
+<script defer src="/__/firebase/9.13.0/firebase-firestore-compat.js"></script>
+<script defer src="/__/firebase/9.13.0/firebase-functions-compat.js"></script>
+<script defer src="/__/firebase/9.13.0/firebase-messaging-compat.js"></script>
+<script defer src="/__/firebase/9.13.0/firebase-storage-compat.js"></script>
+<script defer src="/__/firebase/9.13.0/firebase-analytics-compat.js"></script>
+<script defer src="/__/firebase/9.13.0/firebase-remote-config-compat.js"></script>
+<script defer src="/__/firebase/9.13.0/firebase-performance-compat.js"></script>
+<!-- 
+  initialize the SDK after all desired features are loaded, set useEmulator to false
+  to avoid connecting the SDK to running emulators.
+-->
+<script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+<link rel="stylesheet" href="./CSS/communityUI_환경일지목록.css">
+
+
+<script type="module">
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+      apiKey: "AIzaSyA1IhyMtiCyPjCzgvwI7prkD9QK9NjIHas",
+      authDomain: "newearth-b3659.firebaseapp.com",
+      projectId: "newearth-b3659",
+      storageBucket: "newearth-b3659.appspot.com",
+      messagingSenderId: "109865594723",
+      appId: "1:109865594723:web:576164973901997fdf2d56"
+  };
+
+  if (!firebase.apps.length) {
+    const app = firebase.initializeApp(firebaseConfig);
+  }else {
+    firebase.app(); // if already initialized, use that one
+  }
+
+  const db = firebase.firestore();
+db.collection('log_com').get().then((snapShot) => {
+    snapShot.forEach((doc) => {
+      console.log(doc.data());
+
+      let template=
+        `<div class="log_item_list">
+          <a href="communityUI_본글보기.html" onclick="location.href='communityUI_환경일지목록.html'">
+            <div class="table_log_grid2">
+              <div class="table_log_date">${doc.data().date}</div>
+                <div class="table_log_image" style="background-image: url('${doc.data().images}')"></div>
+                  <div class="hi">
+                    <div class="table_content_title">${doc.data().title}</div>
+                    <div class="table_log_contents">${doc.data().contents}</div>
+                    <div class="table_log_heart table_heart_btn"></div>
+                </div>
+              </div>
+            </a>
+          </div>`; 
+        $('.table_log_grid').append(template);
+    })
+    
+})
+
+
+
+  </script>
+
+</head>
+<body>
+  <div class="container_bubbles">
+    <div class="bubbles">
+      <span style="--i:11;"></span>
+      <span style="--i:12;"></span>
+      <span style="--i:24;"></span>
+      <span style="--i:10;"></span>
+      <span style="--i:14;"></span>
+      <span style="--i:23;"></span>
+      <span style="--i:18;"></span>
+      <span style="--i:16;"></span>
+      <span style="--i:19;"></span>
+      <span style="--i:20;"></span>
+      <span style="--i:22;"></span>
+      <span style="--i:25;"></span>
+      <span style="--i:18;"></span>
+      <span style="--i:21;"></span>
+      <span style="--i:15;"></span>
+      <span style="--i:13;"></span>
+      <span style="--i:26;"></span>
+      <span style="--i:17;"></span>
+      <span style="--i:13;"></span>
+      <span style="--i:28;"></span>
+      <span style="--i:11;"></span>
+      <span style="--i:12;"></span>
+      <span style="--i:24;"></span>
+      <span style="--i:10;"></span>
+      <span style="--i:14;"></span>
+      <span style="--i:23;"></span>
+      <span style="--i:18;"></span>
+      <span style="--i:16;"></span>
+      <span style="--i:19;"></span>
+      <span style="--i:20;"></span>
+      <span style="--i:22;"></span>
+      <span style="--i:25;"></span>
+      <span style="--i:18;"></span>
+      <span style="--i:21;"></span>
+      <span style="--i:15;"></span>
+      <span style="--i:13;"></span>
+      <span style="--i:26;"></span>
+      <span style="--i:17;"></span>
+      <span style="--i:13;"></span>
+      <span style="--i:28;"></span>
+      <span style="--i:11;"></span>
+      <span style="--i:12;"></span>
+      <span style="--i:24;"></span>
+      <span style="--i:10;"></span>
+      <span style="--i:14;"></span>
+      <span style="--i:23;"></span>
+      <span style="--i:18;"></span>
+      <span style="--i:16;"></span>
+      <span style="--i:19;"></span>
+      <span style="--i:20;"></span>
+      <span style="--i:22;"></span>
+      <span style="--i:25;"></span>
+      <span style="--i:18;"></span>
+      <span style="--i:21;"></span>
+      <span style="--i:15;"></span>
+      <span style="--i:13;"></span>
+      <span style="--i:26;"></span>
+      <span style="--i:17;"></span>
+      <span style="--i:13;"></span>
+      <span style="--i:28;"></span>
+      <span style="--i:11;"></span>
+      <span style="--i:12;"></span>
+      <span style="--i:24;"></span>
+      <span style="--i:10;"></span>
+      <span style="--i:14;"></span>
+      <span style="--i:23;"></span>
+      <span style="--i:18;"></span>
+      <span style="--i:16;"></span>
+      <span style="--i:19;"></span>
+      <span style="--i:20;"></span>
+      <span style="--i:22;"></span>
+      <span style="--i:25;"></span>
+      <span style="--i:18;"></span>
+      <span style="--i:21;"></span>
+      <span style="--i:15;"></span>
+      <span style="--i:13;"></span>
+      <span style="--i:26;"></span>
+      <span style="--i:17;"></span>
+      <span style="--i:13;"></span>
+      <span style="--i:28;"></span>
+    </div>
+  </div>
+  <header class="container">
+    <div class="home">
+      <img src="https://firebasestorage.googleapis.com/v0/b/newearth-b3659.appspot.com/o/logoimg.png?alt=media&token=a7173598-5c5f-4586-b00f-8886c31d264d"></a>
+    </div>
+    <!-- env : environment -->
+    <nav class="top_list">
+        <div class="item">환경일지</div>
+        <div class="item"><a href="communityUI_환경보호방법목록.html" onclick="location.href='communityUI_환경일지목록.html'">환경보호방법</a></div>
+        <div class="item">환경발자국</div>
+    </nav>
+    <!-- right -->
+    <nav class="top_list_2">
+      <div class="home_button">
+        <img src="https://firebasestorage.googleapis.com/v0/b/newearth-b3659.appspot.com/o/%EC%A7%80%EA%B5%AC%20%EC%9D%B4%EB%AF%B8%EC%A7%80.png?alt=media&token=e9f565c6-660b-4d0c-8f74-bc15e48fbd56">
+      </div>
+        <!--<div class="item login">로그인</div>-->
+    </nav>
+</header>
+
+<aside class="left_list">
+    <div class="item">환경일지</div>
+    <div class="item"><a href="communityUI_환경보호방법목록.html" onclick="location.href='communityUI_환경일지목록.html'">환경보호방법</a></div>
+</aside>
+
+<div class="table_log_grid">
+  <!-- <div class="log_item_list">
+    <a href="communityUI_본글보기.html" onclick="location.href='communityUI_환경일지목록.html'"><div class="table_log_grid2">
+      <div class="table_log_date">날짜</div>
+      <div class="log_item_list2">
+        <img src=`${doc.data().image}` class="table_log_image">
+      </div>
+      <div class="hi">
+        <div class="table_content_title">지구를 지키자</div>
+        <div class="table_log_contents">내용</div>
+        <div class="table_log_heart table_heart_btn">
+       </div>
+      </div>
+    </div></a>
+  </div>
+  
+  <div class="log_item_list">
+    <a href="communityUI_본글보기.html" onclick="location.href='communityUI_환경일지목록.html'"><div class="table_log_grid2">
+    <div class="log_item_list2">image</div>
+      <div class="hi">
+        <div class="table_content_title">지구를 지키자</div>
+        <div class="table_log_autor">지은이</div>
+        <div class="table_log_contents">내용</div>
+        <div class="table_log_heart table_heart_btn">
+        </div>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="log_item_list">
+    <a href="communityUI_본글보기.html" onclick="location.href='communityUI_환경일지목록.html'"><div class="table_log_grid2">
+      <div class="log_item_list2">image</div>
+        <div class="hi">
+          <div class="table_content_title">지구를 지키자</div>
+          <div class="table_log_autor">지은이</div>
+          <div class="table_log_contents">내용</div>
+         <div class="table_log_heart table_heart_btn">
+        </div>
+        </div>
+      </div></a>
+  </div>
+
+  <div class="log_item_list">
+    <a href="communityUI_본글보기.html" onclick="location.href='communityUI_환경일지목록.html'"><div class="table_log_grid2">
+      <div class="log_item_list2">image</div>
+        <div class="hi">
+          <div class="table_content_title">지구를 지키자</div>
+          <div class="table_log_autor">지은이</div>
+          <div class="table_log_contents">내용</div>
+          <div class="table_log_heart table_heart_btn">
+          </div>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="log_item_list">
+    <a href="communityUI_본글보기.html" onclick="location.href='communityUI_환경일지목록.html'"><div class="table_log_grid2">
+      <div class="log_item_list2">image</div>
+        <div class="hi">
+          <div class="table_content_title">지구를 지키자</div>
+          <div class="table_log_autor">지은이</div>
+          <div class="table_log_contents">내용</div>
+          <div class="table_log_heart table_heart_btn">
+          </div>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="log_item_list">
+    <a href="communityUI_본글보기.html" onclick="location.href='communityUI_환경일지목록.html'"><div class="table_log_grid2">
+      <div class="log_item_list2">image</div>
+        <div class="hi">
+          <div class="table_content_title">지구를 지키자</div>
+          <div class="table_log_autor">지은이</div>
+          <div class="table_log_contents">내용</div>
+          <div class="table_log_heart table_heart_btn">
+          </div>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="log_item_list">
+    <a href="communityUI_본글보기.html" onclick="location.href='communityUI_환경일지목록.html'"><div class="table_log_grid2">
+      <div class="log_item_list2">image</div>
+        <div class="hi">
+          <div class="table_content_title">지구를 지키자</div>
+          <div class="table_log_autor">지은이</div>
+          <div class="table_log_contents">내용</div>
+          <div class="table_log_heart table_heart_btn">
+          </div>
+      </div>
+    </div></a>
+  </div>
+
+<div class="log_item_list">
+  <a href="communityUI_본글보기.html" onclick="location.href='communityUI_환경일지목록.html'"><div class="table_log_grid2">
+    <div class="log_item_list2">image</div>
+      <div class="hi">
+        <div class="table_content_title">지구를 지키자</div>
+        <div class="table_log_autor">지은이</div>
+        <div class="table_log_contents">내용</div>
+        <div class="table_log_heart table_heart_btn">
+        </div>
+    </div>
+  </div></a>
+</div> -->
+</div>
+<div class="table_log_writes">
+  <a href="communityUI_환경일지작성.html" onclick="location.href='communityUI_환경일지목록.html'"><button class="log_write_button">작성하기</button></a>
+</div>
+
+</body>
+</html>
