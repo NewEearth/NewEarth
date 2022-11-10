@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>login</title>
+        <title>To do list</title>
 
         <!-- update the version number as needed -->
         <script defer src="/__/firebase/9.13.0/firebase-app-compat.js"></script>
@@ -24,8 +24,6 @@
 
     </head>
     <body>
-        
-
 
         <!-- 상단 메뉴바 -->
         <header class="container">
@@ -42,6 +40,39 @@
             </nav>
         </header>
 
+        <!-- todo -->
+        <div id="page_env_todo">
+            <aside class="left_list">
+                <div class="location_env_step item">환경발자국</div>
+                <div class="location_env_todo item">To do list</div>
+            </aside>
+            <section id="content_env_todo">
+                <article>  
+                    <fieldset id="check_list">
+                        <legend id="content_env_todo_title">To Do List</legend>
+            
+                        <div>
+                        <input type="text" placeholder="Todo 1 : (예시)텀블러 사용하기" id="checkbox_text1" name="text1" required>
+                        <label for="checkbox_text1"></label>
+                        </div>
+
+                        <div>
+                            <input type="text" placeholder="Todo 2 : (예시)나갈 때 불 끄기" id="checkbox_text2" name="text2" required>
+                            <label for="checkbox_text2"></label>
+                        </div>
+
+                        <div>
+                        <input type="text" placeholder="Todo 3 : (예시)일회용품 사용하지 않기" id="checkbox_text3" name="text3" required>
+                        <label for="checkbox_text3"></label>
+                        </div>
+
+                        <div id="enter_Button" class="enter_Button">
+                        <button type="submit">등록</button>
+                        </div>
+                    </fieldset>
+                </article>
+            </section>
+        </div>
         <script type="module">
             // Import the functions you need from the SDKs you need
             import { initializeApp } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js";
@@ -93,7 +124,7 @@
                 console.log(user.uid);
 
                 //화면 전환
-                window.location.href="./content_env_step.html"
+                // window.location.href="./content_env_step.html"
                 // console.log(data);
                 // console.log(auth);
                 
@@ -111,5 +142,8 @@
             });
         </script>
 
+        <script src="./js/todolist2.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- <script type="module" src="./js/add.js"></script> -->
     </body>
 </html>
