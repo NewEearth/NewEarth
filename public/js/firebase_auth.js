@@ -2,6 +2,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
+import "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js";
 
 import { 
     getAuth,// authentication 설정
@@ -14,12 +15,12 @@ import {
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-apiKey: "AIzaSyA1IhyMtiCyPjCzgvwI7prkD9QK9NjIHas",
-authDomain: "newearth-b3659.firebaseapp.com",
-projectId: "newearth-b3659",
-storageBucket: "newearth-b3659.appspot.com",
-messagingSenderId: "109865594723",
-appId: "1:109865594723:web:576164973901997fdf2d56"
+    apiKey: "AIzaSyA1IhyMtiCyPjCzgvwI7prkD9QK9NjIHas",
+    authDomain: "newearth-b3659.firebaseapp.com",
+    projectId: "newearth-b3659",
+    storageBucket: "newearth-b3659.appspot.com",
+    messagingSenderId: "109865594723",
+    appId: "1:109865594723:web:576164973901997fdf2d56"
 };
 
 // Initialize Firebase
@@ -46,10 +47,9 @@ auth
     console.log(user);
     console.log(user.uid);
     // userInfo = user;
-    get_memo_list();
+    //get_memo_list();
     console.log(data);
-    
-
+    window.location.href="./env_step_content.html"
 })
 .catch((error) => {
     // Handle Errors here.
