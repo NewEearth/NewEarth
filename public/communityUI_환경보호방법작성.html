@@ -34,68 +34,6 @@
   <!-- index.html 적용-->
   <link rel="stylesheet" href="./CSS/communityUI_환경보호방법작성.css">
 
-  <script type="module">
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    const firebaseConfig = {
-        apiKey: "AIzaSyA1IhyMtiCyPjCzgvwI7prkD9QK9NjIHas",
-        authDomain: "newearth-b3659.firebaseapp.com",
-        projectId: "newearth-b3659",
-        storageBucket: "newearth-b3659.appspot.com",
-        messagingSenderId: "109865594723",
-        appId: "1:109865594723:web:576164973901997fdf2d56"
-    };
-
-    if (!firebase.apps.length) {
-      const app = firebase.initializeApp(firebaseConfig);
-    }else {
-      firebase.app(); // if already initialized, use that one
-    }
-    const db = firebase.firestore();
-    const storage = firebase.storage();
-
-  $('#send').click(function () {
-    console.log("업로드");
-    const file = document.querySelector('#env_images1').files[0];
-    console.log(file);
-    const storageRef = storage.ref();
-    const savePath = storageRef.child('image/' + file.name);
-    const uploadImage = savePath.put(file);
-    console.log(file.name);
-     uploadImage.on('state_changed',
-        // 변화시 동작하는 함수 
-        null,
-        //에러시 동작하는 함수
-        (error) => {
-          console.error('실패사유는', error);
-        },
-        // 성공시 동작하는 함수
-        () => {
-          uploadImage.snapshot.ref.getDownloadURL().then((url) => {
-            console.log('업로드된 경로는', url);
-          const newData = {
-            title: $('.env_enter_title').val(),
-            contents: $('.env_enter_contents').val(),
-            date: $('.env_date2').val(),
-            images: url,
-            // enter: $('.env_enter2').val(),
-
-          }
-          console.log(newData);
-            db.collection('env_com').add(newData).then((result) => {
-              console.log(result);
-              // window.location.href = "./index.html";
-            }).catch((err) => {
-              console.log(err);
-            });
-          });
-        }
-      );
-  })
-
- 
-
-  </script>
 </head>
 <body>
   <div class="container_bubbles">
@@ -246,7 +184,71 @@
       <div class="env_lists"><a href="communityUI_환경보호방법목록.html" onclick="location.href='communityUI_환경보호방법작성.html'">목록</a></div>
     </div>
   </div>
-  <script type="module" src="firebase.js"></script>
+
+  <script type="module">
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+        apiKey: "AIzaSyA1IhyMtiCyPjCzgvwI7prkD9QK9NjIHas",
+        authDomain: "newearth-b3659.firebaseapp.com",
+        projectId: "newearth-b3659",
+        storageBucket: "newearth-b3659.appspot.com",
+        messagingSenderId: "109865594723",
+        appId: "1:109865594723:web:576164973901997fdf2d56"
+    };
+
+    if (!firebase.apps.length) {
+      const app = firebase.initializeApp(firebaseConfig);
+    }else {
+      firebase.app(); // if already initialized, use that one
+    }
+    const db = firebase.firestore();
+    const storage = firebase.storage();
+
+  $('#send').click(function () {
+    console.log("업로드");
+    const file = document.querySelector('#env_images1').files[0];
+    console.log(file);
+    const storageRef = storage.ref();
+    const savePath = storageRef.child('image/' + file.name);
+    const uploadImage = savePath.put(file);
+    console.log(file.name);
+     uploadImage.on('state_changed',
+        // 변화시 동작하는 함수 
+        null,
+        //에러시 동작하는 함수
+        (error) => {
+          console.error('실패사유는', error);
+        },
+        // 성공시 동작하는 함수
+        () => {
+          uploadImage.snapshot.ref.getDownloadURL().then((url) => {
+            console.log('업로드된 경로는', url);
+          const newData = {
+            title: $('.env_enter_title').val(),
+            contents: $('.env_enter_contents').val(),
+            date: $('.env_date2').val(),
+            images: url,
+            // enter: $('.env_enter2').val(),
+
+          }
+          console.log(newData);
+            db.collection('env_com').add(newData).then((result) => {
+              console.log(result);
+              // window.location.href = "./index.html";
+            }).catch((err) => {
+              console.log(err);
+            });
+          });
+        }
+      );
+  })
+
+ 
+
+  </script>
+
+  <!-- <script type="module" src="firebase.js"></script> -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </body>
 
