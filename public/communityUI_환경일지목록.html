@@ -56,7 +56,6 @@ db.collection('log_com').get().then((snapShot) => {
 
       let template=
         `<div class="log_item_list">
-          <a href="communityUI_본글보기.html" onclick="location.href='communityUI_환경일지목록.html'">
             <div class="table_log_grid2">
               <div class="table_log_date">${doc.data().date}</div>
                 <div class="table_log_image" style="background-image: url('${doc.data().images}')"></div>
