@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>mainpage</title>
+
+
+
+
+  <link rel="stylesheet" href="./CSS/reset.css">
+  <link rel="stylesheet" href="./CSS/worldmap_style.css">
+  <link rel="stylesheet" href="./CSS/worldmap_markhover.css">
+  <link rel="stylesheet" href="./CSS/worldmap_modal.css">
+  <link rel="stylesheet" href="./CSS/worldmap_font.css">
+
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <script src="./js/worldmap_main.js"></script>
+  <script src="./js/worldmap_wheel.js"></script>
+  <script src="./js/worldmap_hover.js"></script>
+
+
+
+
+</head>
+
+<body>
+
+  <!--로고-->
+  <div id="logo">
+    <img src="./imgs/logoimg.png" alt="logo img" height="200px" width="175px">
+  </div>
+
+  <!--글씨-->
+  <div class="bulb">
+    <h3>※마우스 휠을 조종해 지도를 이동할 수 있어요.</h3>
+  </div>
+
+  <!--이동버튼-->
+  <botton class="btn" id="btn_community" style="right: 40px; top: 20px;">community</botton>
+  <botton class="btn" id="btn_Quest" style="right: 40px; top: 80px;">Quest</botton>
+  <botton class="btn" id="btn_Activites" style="right: 40px; top: 140px;">Activites</botton>
+
+
+
+  <!--페이지 구성-->
+  <main id="fullpage">
+    <section class="section">
+
+
+      <img id="capital_hoverimg" src="./imgs/worldmap_captialarea_hoverimg.PNG" alt=""
+        style="position:absolute;z-index: -2;display:none;">
+      <img id="Gangwon_hoverimg" src="./imgs/worldmap_Gangwon_hoverimg.PNG" alt=""
+        style="position:absolute;z-index: -2;display:none;">
+      <img id="Dokdo_hoverimg" src="./imgs/worldmap_Dokdo_hoverimg.PNG" alt=""
+        style="position:absolute;z-index: -2;left:3px;display:none;">
+      <img id="Busan_hoverimg" src="./imgs/worldmap_Busan_hoevrimg.png" alt=""
+        style="position:absolute;z-index: -2; top:5px; left:-13px;display:none;">
+      <img id="Jeju_hoverimg" src="./imgs/worldmap_Jeju_hover img.PNG" alt=""
+        style="position:absolute;z-index: -2; top:5px;display:none;">
+
+
+      <div class="korea">
+
+        <!--서울특별시 팝업창-->
+        <div class="modal">
+          <div class="modal-content">
+            <span class="modal_close">X</span>
+            <div class="title" style=" padding: 0 0 10px 30px;">CAPITAL AREA <span class="asidetitle">수도권</span></div>
+            <div style="float: left;">
+              <img src="./imgs/worldmap_captialarea.jpg" style="padding: 10px 10px 10px 10px; border-radius: 20px;"
+                width="530px" height="375px">
+            </div>
+
+            <div style="float:left; margin-right: 20px; word-break: break-all;width: 400px;">
+              <p class="modaktitle"><span class="firsttitle">인구2600만명의 과밀화지역 <br>최근 쓰레기 매립 관련 갈등 심화</span><br>
+                수도권의 쓰레기들은 인천을 매립되고 있었으나, 지난 2016년 인천시·서울시·경기도·환경부는 4자합의로 2025년까지만 인천의 수도권 매립지 사용을 연장하고
+                대신 그 기간 동안 대체 매립지를 찾기로 합의하였다. 또한 2025년 수도권 매립지 종료에 따라 인천관역시가 인천 내 쓰레기만을 매립하겠다고 선언하게 되면서 서울과 경기의
+                쓰레기를 매립할 매립지를 선정하고자 하였다. 하지만 시·군 중 어느 한 곳도 지원하지 않아 관련 갈등이 심화되고있다.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!--강원도 팝업창-->
+        <div class="modal">
+          <div class="modal-content">
+            <span class="modal_close">X</span>
+            <div class="title" style=" padding: 0 0 10px 30px;">GANGWON-DO<span class="asidetitle">강원도</span></div>
+            <div style="float: left;">
+              <img src="./imgs/worldmap_gangwon-do.jpg" style="padding: 10px 10px 10px 10px; border-radius: 20px;"
+                width="530px" height="375px">
+            </div>
+
+            <div style="float:left; margin-right: 20px; word-break: break-all;width: 400px;">
+              <p class="modaktitle"><span class="firsttitle">빈번하게 발생하는 동해안 산불...피해심각</span><br>
+                2022년 3월 3일 60대 남성의 방화로 통해서는 역대 최대 규모의 화재가 발생했다.동해시 2,100ha,강릉 옥계 1,900ha로
+                총 4,000ha의 산불피해가 발생했다. 양양과 간성, 양양과 강릉 사이에 부는 바람은 태백산맨을 넘어오며 고온건조한 성질
+                을 띠게 되고 풍속이 빨라진다. 또한 강원도의 산림은 산불에 취약한 소나무 위주이다. 이러한 특성으로 강원도 동해안 지역은
+                한번 불이 붙으면 짧은시간 큰 피해로 번진다. 더불어 강원도 지역 산림에는 급경사 지역이 많고 산세가 높아 소방 작업도 어렵다.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!--독도 팝업창-->
+        <div class="modal">
+          <div class="modal-content">
+            <span class="modal_close">X</span>
+            <div class="title" style=" padding: 0 0 10px 30px;">DOKDO<span class="asidetitle">독도</span></div>
+            <div style="float: left;">
+              <img src="./imgs/worldmap_dokdo.jpg" style="padding: 10px 10px 10px 10px; border-radius: 20px;"
+                width="530px" height="375px">
+            </div>
+
+            <div style="float:left; margin-right: 20px; word-break: break-all;width: 400px;">
+              <p class="modaktitle"><span class="firsttitle">점점 뜨거워지는 독도의 바다</span><br>
+                독도의 상징인 새, 동해의 수온이 높아지면서 괭이 갈매기가 독도에서 알을 낳는 시기가 점점 앞당겨지고 있다.
+                괭이갈래미의 주된 먹거리인 물고기들이 예전보다 일찍 독도에 오고 있기 때문이다. 또 난류의 힘이 점점 세지면서 드물게
+                발견됐던 아열대성 어종을 이제는 독도에서 손쉽게 찾아볼 수 있다.
+                바다숲도 사라지고 있다. 암반에서 해조류가 사라지고 그곳에 서식하게 되는 어류들도 사라지게 되면서 암반에
+                석화질 물질만 남고 황폐화되는 바다 사막화 현상이 심각하다.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!--부산 팝업창-->
+        <div class="modal">
+          <div class="modal-content">
+            <span class="modal_close">X</span>
+            <div class="title" style=" padding: 0 0 10px 30px;">BUSAN<span class="asidetitle">부산</span></div>
+            <div style="float: left;">
+              <img src="./imgs/worldmap_busan.jpg" style="padding: 10px 10px 10px 10px; border-radius: 20px;"
+                width="530px" height="375px">
+            </div>
+
+            <div style="float:left; margin-right: 20px; word-break: break-all;width: 400px;">
+              <p class="modaktitle"><span class="firsttitle">폐타이어로 뒤덮인 부산 앞바다</span><br>
+                해가 갈수록 집중호우의 강도는 더 세지고 기간은 더 길어진다. 집중호우가 지나간 부산앞바다는 항상 밀려온 해양쓰레기들로 가득하다.
+                이들의 대부분은 육상에서 온 쓰레기들이다. 이런 쓰레기들은 전국 곳곳의 하천에서 유입되고 발생원 추적이 어렵고, 발생원을 추적해도
+                해류에 따른 이동흐음이 각양각색이다.
+                앞으로 육상에서 생산한 해양쓰레기들을 효율적으로 처리하지 못하면,
+                부산 앞바다는 관광자원과 수산자원이 넘치는 풍요의 공간이 아닌 죽음의 공간으로 전락할 수 있다.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!--제주 팝업창-->
+        <div class="modal">
+          <div class="modal-content">
+            <span class="modal_close">X</span>
+            <div class="title" style=" padding: 0 0 10px 30px;">JEJU<span class="asidetitle">제주</span></div>
+            <div style="float: left;">
+              <img src="./imgs/worldmap_jeju.jpg" style="padding: 10px 10px 10px 10px; border-radius: 20px;"
+                width="530px" height="375px">
+            </div>
+
+            <div style="float:left; margin-right: 20px; word-break: break-all;width: 400px;">
+              <p class="modaktitle"><span class="firsttitle">청정제주...1인당 쓰레기 발생량 전국 최고</span><br>
+                제주도는 인구 및 관광객 등의 증가로 1인당 폐기물 발생량이 전국 평균 2배이상 발생하고 있고, 관광객이 버리는 생활폐기물이
+                전체 발생량 가운데 40% 이상을 차지하는 것으로 나타났다. 이런 상황에서 제주의 쓰레기 처리 역량은 한계에 다다르고 있고 쓰레기 매립 및
+                소각시설도 부족하다. 2019년 제주에서 1만톤이 넘는 쓰레기를 필리핀으로 불법 수출했다가 반송돼 국제적 망신을 사기도 했다.
+                넘쳐나는 쓰레기는 제주의 자연이 감당하기 어려운 수준 다다랐다.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <img src="./imgs/worldmap_korea.png" usemap="#image-map1" height="727px" width="1535px" alt="korea img">
+
+
+        <map name="image-map1">
+
+          <div class="mark" onmouseover="cap_hover_mover()" onmouseout="cap_hover_mout()">
+            <img id="capital_flag" src="./imgs/worldmap_flag.png" alt=""
+              style="position:absolute;z-index: 5; width: 100px;height: 100px; top:106px;left:643px;display: none;">
+            <area target="" alt="capital area" title="capital area"
+              coords="678,132,666,135,655,129,651,140,643,143,633,151,612,158,601,164,612,177,628,178,632,185,629,197,624,204,617,209,628,215,637,223,648,231,663,235,675,229,684,227,693,232,700,238,709,239,716,235,724,235,731,236,740,242,749,240,757,235,765,232,774,231,774,219,777,209,781,201,788,197,781,192,774,186,768,175,776,159,768,155,769,145,753,141,743,132,750,125,738,118,731,110,727,102,713,107,708,117,698,116,688,114,685,121"
+              shape="poly">
+
+          </div>
+
+          <div class="mark" onmouseover="Gan_hover_mover()" onmouseout="Gan_hover_mout()">
+            <img id="Gangwon_flag" src="./imgs/worldmap_flag.png" alt=""
+              style="position:absolute;z-index: 5; width: 100px;height: 100px; top:103px;left:797px;display:none;">
+            <area target="" alt="Gangwon" title="Gangwon"
+              coords="731,99,731,111,739,121,747,124,747,139,757,143,768,143,769,155,774,159,768,173,773,183,785,192,774,208,778,220,769,231,751,240,766,244,776,246,791,240,805,235,812,246,815,251,824,251,834,253,842,262,849,270,866,270,880,274,895,272,907,273,914,265,923,273,933,270,941,278,946,262,974,246,964,229,956,206,953,193,942,181,936,164,926,149,918,137,902,130,888,121,888,113,866,90,856,94,841,99,820,95,801,95,791,105,772,107,742,97"
+              shape="poly">
+          </div>
+
+          <div class="mark" onmouseover="Dok_hover_mover()" onmouseout="Dok_hover_mout()">
+            <img id="Dokdo_flag" src="./imgs/worldmap_flag.png" alt=""
+              style="position:absolute;z-index: 5; width: 100px;height: 100px; top:67px;left:1032px;display: none;">
+            <area target="" alt="Dokdo" title="Dokdo" coords="1086,126,1074,144,1093,148,1101,137" shape="poly">
+          </div>
+
+          <div class="mark" onmouseover="Bus_hover_mover()" onmouseout="Bus_hover_mout()">
+            <img id="Busan_flag" src="./imgs/worldmap_flag.png" alt=""
+              style="position:absolute;z-index: 5; width: 100px;height: 100px; top:318px;left:895px;display: none;">
+            <area target="" alt="Busan" title=" Busan"
+              coords="976,364,959,365,950,373,941,381,936,391,923,391,921,398,910,403,932,410,944,410,969,395,976,381"
+              shape="poly">
+          </div>
+
+          <div class="mark" onmouseover="Jej_hover_mover()" onmouseout="Jej_hover_mout()">
+            <img id="Jeju_flag" src="./imgs/worldmap_flag.png" alt=""
+              style="position:absolute;z-index: 5; width: 100px;height: 100px; top:575px;left:547px;display: none;">
+            <area target="" alt="Jeju" title="Jeju"
+              coords="604,629,594,627,582,635,568,633,557,663,581,665,601,661,617,665,644,654,655,629,643,618,631,623,621,624"
+              shape="poly">
+          </div>
+
+        </map>
+
+      </div>
+
+
+
+
+    </section>
+
+    <section class="section">
+      <img src="./imgs/worldmap_scroll.png" height="727px" width="1535px" alt="scroll">
+    </section>
+
+    <section class="section">
+
+      <div id="worldmap">
+
+        <!--유럽 팝업창-->
+        <div class="modal">
+          <div class="modal-content">
+            <span class="modal_close">X</span>
+            <div class="title" style=" padding: 0 0 10px 30px;">EUROPE<span class="asidetitle">유럽</span></div>
+            <div style="float: left;">
+              <img src="./imgs/worldmap_europe.jpg" style="padding: 10px 10px 10px 10px; border-radius: 20px;"
+                width="530px" height="375px">
+            </div>
+
+            <div style="float:left; margin-right: 20px; word-break: break-all;width: 400px;">
+              <p class="modaktitle"><span class="firsttitle">보이지 않는 살인자...대기오염 </span><br>
+                유럽환경청에 따르면 유럽에서 매년 약 40만명의 사람들이 대기오염으로 기대수명보다 빨리 생을 마감한다. 코로나 19 대유행으로 사람들의 바깥활동이 줄어 이산화질소의 양이 크게 줄었음에도
+                여전히 높은 석탄의존도를 보이고 있고, 이외의 다양한
+                오염물질들이 대기중의 다른 오염물질과 결합하여 많은 미세먼지를 만들어냈다. 프랑스에서는 행정법원이 자국이 대기질 개선에 실패했다며 프랑스 정부에게 벌금을
+                선고하기도 하였다.
+
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!--아프리카 팝업창-->
+        <div class="modal">
+          <div class="modal-content">
+            <span class="modal_close">X</span>
+            <div class="title" style=" padding: 0 0 10px 30px;">AFRICA<span class="asidetitle">아프리카</span></div>
+            <div style="float: left;">
+              <img src="./imgs/worldmap_africa.jpg" style="padding: 10px 10px 10px 10px; border-radius: 20px;"
+                width="530px" height="375px">
+            </div>
+
+            <div style="float:left; margin-right: 20px; word-break: break-all;width: 400px;">
+              <p class="modaktitle"><span class="firsttitle">점점 사라져가는 아프리카의 자연</span><br>
+                최근 지구온난화로 인해 아프리카의 자연은 점점 원래의 모습을 잃어가고 있다. 사하라사막 남쪽에 위치한
+                차드호의 경우, 람사르 협약에 등록되어 있어 85종의 어류와 23종의 고유어종, 44종의 조류를 비롯해 악어,
+                하마, 코끼리, 목도리도요, 녹슨 종달새 등의 고유종이 살고 있었지만, 사막화로 인해 물이 거의 다 빠져버려
+                지금 상당수의 어종이 멸종되거나 멸종위기에 처해있고, 이들을 먹고 서식했던 새들의 개체수도 급감했다.
+                악어, 하마, 코끼리는 이미 이 지역에서 소멸해버렸다.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!--아랍에미리트 팝업창-->
+        <div class="modal">
+          <div class="modal-content">
+            <span class="modal_close">X</span>
+            <div class="title" style=" padding: 0 0 10px 18px;">UNITED ARAB EMIRATES<span
+                class="asidetitle">아랍에미리트</span></div>
+            <div style="float: left;">
+              <img src="./imgs/worldmap_United Arab Emirates.jpg"
+                style="padding: 10px 10px 10px 10px; border-radius: 20px;" width="530px" height="375px">
+            </div>
+
+            <div style="float:left; margin-right: 20px; word-break: break-all;width: 400px;">
+              <p class="modaktitle"><span class="firsttitle">급격한 도시화...이에 따른 환경문제</span><br>
+                아랍에미리트는 급격한 경제발전과 도시화로 여러 환경문제를 겪고있다. 주요 도시인 아부다비와 두바이의 대기오염 문제가 심각하며,
+                해양지역을 중심으로 난개발로 인한 생태계파괴 문제가 심각하다. 또한 수자원이 부족한 아랍에미리트의 도시화와 인구 증가는
+                이 지역의 물 부족 문제를 악화시키고 있다.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!--호주 팝업창-->
+        <div class="modal">
+          <div class="modal-content">
+            <span class="modal_close">X</span>
+            <div class="title" style=" padding: 0 0 10px 18px;">AUSTRALIA<span class="asidetitle">호주</span></div>
+            <div style="float: left;">
+              <img src="./imgs/worldmap_australia.jpg" style="padding: 10px 10px 10px 10px; border-radius: 20px;"
+                width="530px" height="375px">
+            </div>
+
+            <div style="float:left; margin-right: 20px; word-break: break-all;width: 400px;">
+              <p class="modaktitle"><span class="firsttitle">점점 악화되고 있는 호주 환경</span><br>
+                호주의 환경보고서에 따르면, 호주의 도시환경을 제외하고 기후, 극단적 시후현상, 땅과 흙, 해안, 대기,
+                도시, 남극 등 모든 범주의 환경 부문이 악화되고 있다고 평가했다. 연구자들은 2016년 이후 멸종위기종 8% 증가,
+                유럽 식민지화 이후 해안 염습지 78% 유실, 다른 대륙보다 많은 포유동물 상실을 환경문제를 발견했다고 밝혔다.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!--중국 팝업창-->
+        <div class="modal">
+          <div class="modal-content">
+            <span class="modal_close">X</span>
+            <div class="title" style=" padding: 0 0 10px 18px;">CHINA<span class="asidetitle">중국</span></div>
+            <div style="float: left;">
+              <img src="./imgs/worldmap_china.jpg" style="padding: 10px 10px 10px 10px; border-radius: 20px;"
+                width="530px" height="375px">
+            </div>
+
+            <div style="float:left; margin-right: 20px; word-break: break-all;width: 400px;">
+              <p class="modaktitle"><span class="firsttitle">고도성장에 따른 후유증...심각한 환경문제</span><br>
+                중국은 현재 지나친 고도성장의 휴우증으로 황사와 미세먼지 등 대기오염 상태가 매우 심각하여 매년 약 100만 명에 이르는
+                사람들이 목숨을 잃고있다. 중국 정부는 대기오염과의 전쟁을 선포했지만, 석찬과 철강 등 국영산업의 과잉생산은 계속되고있다.
+                또한 매년 1,700건의 수질오염 사건이 말생하고, 주요 하천의 75%가 어류 생존이 불가능한 단계에 이르렀다. 이에 대해 중국 전체 토지 면적의
+                27%가 이미 사막화되고 매년 그 범위가 넓어지고있다.
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+        <!--브라질 팝업창-->
+        <div class="modal">
+          <div class="modal-content">
+            <span class="modal_close">X</span>
+            <div class="title" style=" padding: 0 0 10px 18px;">BRAZIL<span class="asidetitle">브라질</span></div>
+            <div style="float: left;">
+              <img src="./imgs/worldmap_brazil.jpg" style="padding: 10px 10px 10px 10px; border-radius: 20px;"
+                width="530px" height="375px">
+            </div>
+
+            <div style="float:left; margin-right: 20px; word-break: break-all;width: 400px;">
+              <p class="modaktitle"><span class="firsttitle">불타 사라져가는 지구의 허파, 아마존</span><br>
+                화재와 무단벌채로 지구의 허파 아마존이 점점 사라져가고 있다. 더 나아가 브라질 국립우주연구소 연구진은 과학 저널 네이처에 보낸 논문을 통해 숲이 파괴된 지역에서 배출되는 탄산가스 양이
+                전체 아마존 열대우림의 흡수량 보다 더 많은 것으로 나타났다고 주장했다.
+                논문 저자 중 1명이 루시아나 바니 가치 연구원은 "아마존 열대우림이 연간 배출하는 탄산가스가 2억9000만t에 달한다"며 "화재와 무단 벌채
+                때문에 아마존 열대우림이 탄산가스 배출 지역으로 변하고 있다."고 지적했다.
+            </div>
+          </div>
+        </div>
+
+        <img id="europe_hoverimg" src="./imgs/worldmap_europe_hoverimg.PNG" alt=""
+          style="position:absolute;z-index: -2;top:2px;left:-4px;display:none;">
+        <img id="Africa_hoverimg" src="./imgs/worldmap_Africa_hoverimg.PNG" alt=""
+          style="position:absolute;z-index: -2;top:3px;left:-4px;display:none;">
+        <img id="UnitedArabEmirates_hoverimg" src="./imgs/worldmap_United Arab Emirates_hoverimg.PNG" alt=""
+          style="position:absolute;z-index: -2;top:2px;left:-4px;display:none;">
+        <img id="Australia_hoverimg" src="./imgs/worldmap_Australia_hoverimg.PNG" alt=""
+          style="position:absolute;z-index: -2; top:4px;display:none;">
+        <img id="China_hoverimg" src="./imgs/worldmap_China_hoverimg.PNG" alt=""
+          style="position:absolute;z-index: -2; top:2px;left:-1px;display:none;">
+        <img id="Brazill_hoverimg" src="./imgs/worldmap_Brazil_hoverimg.PNG" alt=""
+          style="position:absolute;z-index: -2; top:2px;left:5px;display:none;">
+
+
+        <img src="./imgs/worldmap_worldmap.png" usemap="#image-map2" height="727px" width="1535px">
+        <map name="image-map2">
+
+
+          <div class="mark" onmouseover="eur_hover_mover()" onmouseout="eur_hover_mout()">
+            <img id="europe_flag" src="./imgs/worldmap_flag.png" alt=""
+              style="position:absolute;z-index: 5; width: 100px;height: 100px; top:183px;left:232px;display: none;">
+            <area target="" alt="Europe" title="Europe"
+              coords="202,276,193,292,213,295,225,285,236,277,261,273,278,289,269,297,278,296,277,269,293,282,297,295,307,278,319,287,332,266,361,259,350,246,345,226,342,215,347,201,356,186,350,175,383,177,351,159,339,154,318,164,301,175,288,186,285,197,272,198,266,208,266,216,278,215,282,236,272,240,261,240,250,245,238,255,234,245,223,218,198,241,205,254,223,263"
+              shape="poly">
+          </div>
+
+          <div class="mark" onmouseover="Afr_hover_mover()" onmouseout="Afr_hover_mout()">
+            <img id="Africa_flag" src="./imgs/worldmap_flag.png" alt=""
+              style="position:absolute;z-index: 5; width: 100px;height: 100px; top:310px;left:220px;display: none;">
+            <area target="" alt="Africa" title="Africa"
+              coords="245,303,219,307,191,313,176,319,176,330,152,337,139,348,141,360,137,365,144,368,144,378,153,384,158,397,183,390,202,386,210,395,223,391,223,406,218,417,229,433,219,454,228,493,236,509,248,515,270,516,284,488,295,481,297,466,341,483,362,448,321,422,379,385,351,382,350,374,335,361,325,338,321,323,301,325,289,315,274,330,254,320"
+              shape="poly">
+          </div>
+
+          <div class="mark" onmouseover="Uni_hover_mover()" onmouseout="Uni_hover_mout()">
+            <img id="UnitedArabEirates_flag" src="./imgs/worldmap_flag.png" alt=""
+              style="position:absolute;z-index: 5; width: 100px;height: 100px; top:270px;left:340px;display: none;">
+            <area target="" alt="United Arab Emirates" title="United Arab Emirates" coords="406,335,389,340,402,347"
+              shape="poly">
+          </div>
+
+          <div class="mark" onmouseover="Aus_hover_mover()" onmouseout="Aus_hover_mout()">
+            <img id="Australia_flag" src="./imgs/worldmap_flag.png" alt=""
+              style="position:absolute;z-index: 5; width: 100px;height: 100px; top:415px;left:630px;display: none;">
+            <area target="" alt="Australia" title="Australia"
+              coords="684,446,675,446,666,454,655,454,642,462,633,464,628,470,610,476,604,492,605,503,610,519,628,515,636,519,647,510,662,508,688,519,698,510,701,523,708,530,720,531,727,560,731,550,732,530,740,526,753,508,758,492,742,476,732,467,715,440,712,462,698,462,688,456"
+              shape="poly">
+          </div>
+
+          <div class="mark" onmouseover="Chi_hover_mover()" onmouseout="Chi_hover_mout()">
+            <img id="China_flag" src="./imgs/worldmap_flag.png" alt=""
+              style="position:absolute;z-index: 5; width: 100px;height: 100px; top:228px;left:530px;display: none;">
+            <area target="" alt="China" title="China"
+              coords="623,339,602,345,583,343,564,336,552,328,539,328,511,330,492,312,484,302,483,286,491,278,498,274,498,255,510,258,518,243,533,258,540,262,556,258,567,267,578,274,589,273,601,275,627,269,623,255,642,251,647,243,655,239,660,247,673,254,684,256,682,273,673,277,655,283,642,283,628,290,636,301,631,311,636,321"
+              shape="poly">
+          </div>
+
+          <div class="mark" onmouseover="Bra_hover_mover()" onmouseout="Bra_hover_mout()">
+            <img id="Brazill_flag" src="./imgs/worldmap_flag.png" alt=""
+              style="position:absolute;z-index: 5; width: 100px;height: 100px; top:390px;left:1300px;display: none;">
+            <area target="" alt="Brazil" title="Brazil"
+              coords="1343,401,1326,417,1311,420,1301,428,1284,433,1288,444,1295,451,1311,448,1315,462,1320,467,1323,482,1322,500,1334,508,1333,527,1341,538,1353,535,1348,521,1361,521,1375,502,1376,489,1400,479,1399,463,1400,446,1407,436,1395,425,1379,429,1367,421,1354,419,1345,425,1335,425"
+              shape="poly">
+          </div>
+
+        </map>
+
+      </div>
+
+
+    </section>
+  </main>
+
+  
+  <script src="./js/worldmap_button.js"></script>
+  <script src="./js/worldmap_markclick.js"></script>
+</body>
+
+</html>

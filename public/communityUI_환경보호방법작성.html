@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>환경보호방법작성</title>
+  <link rel="stylesheet" href="./star background/star background/star.css">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+HK:wght@300&display=swap');
+  </style>
+
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <!-- update the version number as needed -->
+  <script defer src="/__/firebase/9.13.0/firebase-app-compat.js"></script>
+  <!-- include only the Firebase features as you need -->
+  <script defer src="/__/firebase/9.13.0/firebase-auth-compat.js"></script>
+  <script defer src="/__/firebase/9.13.0/firebase-database-compat.js"></script>
+  <script defer src="/__/firebase/9.13.0/firebase-firestore-compat.js"></script>
+  <script defer src="/__/firebase/9.13.0/firebase-storage-compat.js"></script>
+  <!-- 
+    initialize the SDK after all desired features are loaded, set useEmulator to false
+    to avoid connecting the SDK to running emulators.
+  -->
+  <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+  <!-- index.html 적용-->
+  <link rel="stylesheet" href="./CSS/communityUI_환경보호방법작성.css">
+
+  <script type="module">
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+        apiKey: "AIzaSyA1IhyMtiCyPjCzgvwI7prkD9QK9NjIHas",
+        authDomain: "newearth-b3659.firebaseapp.com",
+        projectId: "newearth-b3659",
+        storageBucket: "newearth-b3659.appspot.com",
+        messagingSenderId: "109865594723",
+        appId: "1:109865594723:web:576164973901997fdf2d56"
+    };
+
+    if (!firebase.apps.length) {
+      const app = firebase.initializeApp(firebaseConfig);
+    }else {
+      firebase.app(); // if already initialized, use that one
+    }
+    const db = firebase.firestore();
+    const storage = firebase.storage();
+
+  $('#send').click(function () {
+    console.log("업로드");
+    const file = document.querySelector('#env_images1').files[0];
+    console.log(file);
+    const storageRef = storage.ref();
+    const savePath = storageRef.child('image/' + file.name);
+    const uploadImage = savePath.put(file);
+    console.log(file.name);
+     uploadImage.on('state_changed',
+        // 변화시 동작하는 함수 
+        null,
+        //에러시 동작하는 함수
+        (error) => {
+          console.error('실패사유는', error);
+        },
+        // 성공시 동작하는 함수
+        () => {
+          uploadImage.snapshot.ref.getDownloadURL().then((url) => {
+            console.log('업로드된 경로는', url);
+          const newData = {
+            title: $('.env_enter_title').val(),
+            contents: $('.env_enter_contents').val(),
+            date: $('.env_date2').val(),
+            images: url,
+            // enter: $('.env_enter2').val(),
+
+          }
+          console.log(newData);
+            db.collection('env_com').add(newData).then((result) => {
+              console.log(result);
+              // window.location.href = "./index.html";
+            }).catch((err) => {
+              console.log(err);
+            });
+          });
+        }
+      );
+  })
+
+ 
+
+  </script>
+</head>
+<body>
+  <div class="container_bubbles">
+    <div class="bubbles">
+      <span style="--i:11;"></span>
+      <span style="--i:12;"></span>
+      <span style="--i:24;"></span>
+      <span style="--i:10;"></span>
+      <span style="--i:14;"></span>
+      <span style="--i:23;"></span>
+      <span style="--i:18;"></span>
+      <span style="--i:16;"></span>
+      <span style="--i:19;"></span>
+      <span style="--i:20;"></span>
+      <span style="--i:22;"></span>
+      <span style="--i:25;"></span>
+      <span style="--i:18;"></span>
+      <span style="--i:21;"></span>
+      <span style="--i:15;"></span>
+      <span style="--i:13;"></span>
+      <span style="--i:26;"></span>
+      <span style="--i:17;"></span>
+      <span style="--i:13;"></span>
+      <span style="--i:28;"></span>
+      <span style="--i:11;"></span>
+      <span style="--i:12;"></span>
+      <span style="--i:24;"></span>
+      <span style="--i:10;"></span>
+      <span style="--i:14;"></span>
+      <span style="--i:23;"></span>
+      <span style="--i:18;"></span>
+      <span style="--i:16;"></span>
+      <span style="--i:19;"></span>
+      <span style="--i:20;"></span>
+      <span style="--i:22;"></span>
+      <span style="--i:25;"></span>
+      <span style="--i:18;"></span>
+      <span style="--i:21;"></span>
+      <span style="--i:15;"></span>
+      <span style="--i:13;"></span>
+      <span style="--i:26;"></span>
+      <span style="--i:17;"></span>
+      <span style="--i:13;"></span>
+      <span style="--i:28;"></span>
+      <span style="--i:11;"></span>
+      <span style="--i:12;"></span>
+      <span style="--i:24;"></span>
+      <span style="--i:10;"></span>
+      <span style="--i:14;"></span>
+      <span style="--i:23;"></span>
+      <span style="--i:18;"></span>
+      <span style="--i:16;"></span>
+      <span style="--i:19;"></span>
+      <span style="--i:20;"></span>
+      <span style="--i:22;"></span>
+      <span style="--i:25;"></span>
+      <span style="--i:18;"></span>
+      <span style="--i:21;"></span>
+      <span style="--i:15;"></span>
+      <span style="--i:13;"></span>
+      <span style="--i:26;"></span>
+      <span style="--i:17;"></span>
+      <span style="--i:13;"></span>
+      <span style="--i:28;"></span>
+      <span style="--i:11;"></span>
+      <span style="--i:12;"></span>
+      <span style="--i:24;"></span>
+      <span style="--i:10;"></span>
+      <span style="--i:14;"></span>
+      <span style="--i:23;"></span>
+      <span style="--i:18;"></span>
+      <span style="--i:16;"></span>
+      <span style="--i:19;"></span>
+      <span style="--i:20;"></span>
+      <span style="--i:22;"></span>
+      <span style="--i:25;"></span>
+      <span style="--i:18;"></span>
+      <span style="--i:21;"></span>
+      <span style="--i:15;"></span>
+      <span style="--i:13;"></span>
+      <span style="--i:26;"></span>
+      <span style="--i:17;"></span>
+      <span style="--i:13;"></span>
+      <span style="--i:28;"></span>
+    </div>
+  </div>
+  <header class="container">
+    <div class="logo" onclick="location.href='worldmap.html'">
+      <img style="display: inline-block; width: 175px; height: 200px; margin: 70px; margin-top: 100px;" src="https://firebasestorage.googleapis.com/v0/b/newearth-b3659.appspot.com/o/logoimg.png?alt=media&token=a7173598-5c5f-4586-b00f-8886c31d264d"></a>
+    </div>
+    <!-- env : environment -->
+    <nav class="top_list" style="margin-top: 40px;">
+        <div class="item"><a href="communityUI_환경일지목록.html" onclick="location.href='communityUI_환경보호방법작성.html'">환경일지</a></div>
+        <div class="item" onclick="location.href='communityUI_환경보호방법작성.html'">환경보호방법</div>
+        <div class="item"><a href="content_env_step.html" onclick="location.href='content_env_step.html'">환경발자국</a></div>
+    </nav>
+    <!-- right -->
+    <nav class="top_list_2" style="margin-bottom: 100px; margin-top: 40px;">
+      <div class="home_button" onclick="location.href='index.html'">
+        <img src="https://firebasestorage.googleapis.com/v0/b/newearth-b3659.appspot.com/o/%EC%A7%80%EA%B5%AC%20%EC%9D%B4%EB%AF%B8%EC%A7%80.png?alt=media&token=e9f565c6-660b-4d0c-8f74-bc15e48fbd56">
+      </div>
+              <!--<div class="item login">로그인</div>-->
+
+    </nav>
+</header>
+<aside class="left_list">
+    <div class="item"><a href="communityUI_환경일지목록.html" onclick="location.href='communityUI_환경보호방법작성.html'">환경일지</a></div>
+    <div class="item">환경보호방법</div>
+</aside>
+
+<div class="env_way">
+  <div class="env_writes">환경보호방법 작성</div>
+
+  <div class="env_date">날짜
+    <input class="env_date2" type="date">
+  </div>
+  <div>
+    <div class="env_container">
+      <div class="env_title">제목</div>
+      <br>
+      <textarea class="env_enter_title" name="titles" placeholder="제목을 입력해주세요"  style="resize:none;">
+      </textarea>
+      <!--
+      <input type="text" placeholder="제목" id="log_title">
+      <label for="log_title"></label>-->
+    </div>
+
+    <div class="env_container2">
+      <div class="env_contents">내용</div>
+      <br>
+      <textarea class="env_enter_contents" name="contents" placeholder="내용을 입력해주세요" style="resize:none;">
+      </textarea>
+      <!--<input type="text" placeholder="내용" id="log_contents" cols="40">
+      <label for="log_contents"></label>-->
+    </div>
+
+    <div class="env_container_3">
+      <div class="env_image_add">이미지 추가</div>       
+      <br>
+      <div class="env_images">
+        <input type="file" id="env_images1">
+        <label for="env_images1"></label>
+      </div>     
+    </div>
+
+    <div class="env_container4">
+      <div class="env_enter" onclick="location.href='communityUI_환경보호방법목록.html'"><button id="send">등록하기</button></div>
+      <div class="env_lists"><a href="communityUI_환경보호방법목록.html" onclick="location.href='communityUI_환경보호방법작성.html'">목록</a></div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>환경발자국</title>
+        <link rel="stylesheet" href="./star background/star background/star.css">
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+HK:wght@300&display=swap');
+        </style>
+
+        <!-- update the version number as needed -->
+        <script defer src="/__/firebase/9.13.0/firebase-app-compat.js"></script>
+        <!-- include only the Firebase features as you need -->
+        <script defer src="/__/firebase/9.13.0/firebase-auth-compat.js"></script>
+        <script defer src="/__/firebase/9.13.0/firebase-database-compat.js"></script>
+        <script defer src="/__/firebase/9.13.0/firebase-firestore-compat.js"></script>
+        <script defer src="/__/firebase/9.13.0/firebase-storage-compat.js"></script>
+        <!-- 
+            initialize the SDK after all desired features are loaded, set useEmulator to false
+            to avoid connecting the SDK to running emulators.
+        -->
+        <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+        <!-- index.html 적용-->
+        <link rel="stylesheet" href="./CSS/style.css">
+
+        
+    </head>
+    <body>
+        
+
+        <!-- 상단 메뉴바 -->
+        <header class="container">
+            <div class="home" onclick="location.href='worldmap.html'">
+                <img style="display: inline-block; width: 175px; height: 200px; margin-bottom:0px;" src="https://firebasestorage.googleapis.com/v0/b/newearth-b3659.appspot.com/o/logoimg.png?alt=media&token=a7173598-5c5f-4586-b00f-8886c31d264d"></a>
+            </div>
+            <!-- env : environment -->
+            <nav class="top_list" style="margin-bottom: 100px; margin-top: 40px;">
+                <div class="location_env_record item"><a href="communityUI_환경일지목록.html" onclick="location.href='communityUI_환경일지목록.html'">환경일지</a></div>
+                <div class="location_env_protect_record item"><a href="communityUI_환경보호방법목록.html" onclick="location.href='communityUI_환경보호방법목록.html'">환경보호방법</a></div>
+                <div class="location_env_step item">환경발자국</div>
+            </nav>
+            <!-- right -->
+            <nav class="top_list_2" style="margin-bottom: 100px; margin-top: 40px;">
+                <div class="home_button" onclick="location.href='index.html'">
+                <img src="https://firebasestorage.googleapis.com/v0/b/newearth-b3659.appspot.com/o/%EC%A7%80%EA%B5%AC%20%EC%9D%B4%EB%AF%B8%EC%A7%80.png?alt=media&token=e9f565c6-660b-4d0c-8f74-bc15e48fbd56">
+                </div>
+                    <!--<div class="item login">로그인</div>-->
+            </nav>
+        </header>
+        
+        <!-- 환경발자국 -->
+        <div id="page_env_step">
+            <aside class="left_list" style="margin-top: 0px">
+                <div class="location_env_step item">환경발자국</div>
+                <div class="location_env_todo item">To do list</div>
+            </aside>
+            <section id="content_env_step" style="margin-top: 60px; height: 72%; opacity: 0.9;">
+                <!-- <div class="seed_img">
+                     <img src="./imgs/seed.png" class="seed_img"> 
+                     </div>
+                    -->
+            </section>
+        </div>
+        
+        <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js";
+            // TODO: Add SDKs for Firebase products that you want to use
+            // https://firebase.google.com/docs/web/setup#available-libraries
+            import "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js";
+
+            // Your web app's Firebase configuration
+            const firebaseConfig = {
+                apiKey: "AIzaSyA1IhyMtiCyPjCzgvwI7prkD9QK9NjIHas",
+                authDomain: "newearth-b3659.firebaseapp.com",
+                projectId: "newearth-b3659",
+                storageBucket: "newearth-b3659.appspot.com",
+                messagingSenderId: "109865594723",
+                appId: "1:109865594723:web:576164973901997fdf2d56"
+            };
+
+            
+        </script>
+        
+        <script type="module" src="./js/content_env_step.js"></script>
+        <!-- <script type="module" src="./js/firebase.js"></script> -->
+    </body>
+</html>

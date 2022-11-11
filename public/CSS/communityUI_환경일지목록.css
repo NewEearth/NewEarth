@@ -1,0 +1,207 @@
+@import "reset.css";
+
+body {
+    background-color: black;
+    color: white;
+}
+a {
+    color: white;
+    text-decoration-line: none;
+}
+
+.container {
+    display:flex;
+    vertical-align:baseline;
+    justify-content: space-between;
+}
+
+.home {
+  position:absolute;
+  margin-top:-80px;
+  margin-left:-50px;
+}
+
+
+.home>img{
+  width:80%;
+
+}
+
+.top_list >.item {
+  position:relative;
+  display: inline-block;
+  margin-left:380px;
+  margin-top: 50px;
+  font-family: 'Noto Serif KR', serif;
+  font-size: 1.3em;
+}
+
+.home_button{
+  position:absolute;
+  margin-left:-170px;
+  margin-top:35px;
+  padding:5px;
+  height:5vh;
+  width:3vw; 
+}
+
+img{
+  width:100%;
+  height:100%;
+}
+
+.top_list_2 >.item {
+  display: inline-block;
+  position:absolute;
+  margin-left: -150px;
+  margin-top: 50px;
+  font-family: 'Noto Serif KR', serif;
+  font-size: 1.1em;
+}
+
+.top_list_2 >:nth-child(2){
+    margin-right: 90px;
+}
+
+.left_list {
+  position:absolute;
+  margin-left: 70px;
+  margin-top:180px;
+  font-family: 'Noto Serif KR', serif;
+  font-size: 1.2em;
+}
+
+.left_list :nth-child(2) {
+    margin-top: 50px;
+}
+
+/*환경일지 목록*/
+.table_log_grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,600px);
+  grid-auto-rows:700px;
+  /*justify-content:center;*/
+  margin-left:300px;
+  grid-gap:10px;
+  }
+
+/*컨텐츠 영역*/
+.table_log_grid>div{
+      width:100%
+      border 10px solid #FFFFFF;
+      background-color: rgba(255,255,255,0.6);
+      padding:20px;
+      font-size:1.0em;
+      display:flex;
+  }
+
+/*이미지 부분*/
+.table_log_grid2{
+      display:grid;
+      grid-template-columns:580px;
+      grid-template-rows:15px ;
+      grid-gap:5px;
+  }
+
+
+/*
+input.img-button{
+  background:url("/newearth/138533.png")no-repeat;
+  border:none;
+  width:80%;
+  height:150%;
+  cursor:pointer;
+}
+*/
+
+.hi{
+  position:relative;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+
+}
+
+/*
+.table_log_heart{
+  width:24px;
+  height:24px;
+  background-color:#fff;
+  border:1px sloid #fff;
+  margin-top:0px;
+  position:absolute;
+  right:5%;
+  bottom:33%;
+  
+}
+
+.table_heart_btn{
+  background: url('/public/imgs/KakaoTalk_20221010_205641856.png') no-repeat -26px -261px;
+}
+*/
+
+/*.table_log_grid2>div{
+  display:flex;
+  width: 520px;
+  padding:20px;
+  background-color:#929196;
+  border:1px solid #929196;
+}
+*/
+.table_log_date{
+  display:flex;
+  width:200px;
+  height:15px;
+  float: left; 
+  margin-left:360px;
+  background-color:#929196;
+  border:1px solid #929196;
+}
+
+.table_log_image{
+  display:flex;
+  width: 520px;
+  height:300px;
+  padding:20px;
+  background-size: cover;
+  /* margin-top:px;
+  background-color:#929196; */
+  /* border:1px solid #929196; */
+}
+
+.table_content_title{
+  display:flex;
+  width: 230px;
+  height:1px;
+  padding:20px;
+  float:left;
+  text-align:right;
+  background-color:#929196;
+  border:1px solid #929196;
+}
+
+.table_log_contents{
+  display:flex;
+  width: 520px;
+  padding:20px;
+  height:210px;
+  margin-top:10px;
+  background-color:#929196;
+  border:1px solid #929196;}
+
+/*작성하기*/
+.log_write_button{
+  position:absolute;
+  background-color: rgba(255,255,255,0.6);
+  color:#0d0e12;
+  font-weight: 600;
+  width:90px;
+  height:40px;
+  border:1px;
+  border-radius: 10px;
+  margin-left:70px;
+  margin-top:315px;
+  font-family: 'Noto Serif KR', serif;
+  font-size: 16px;
+}
