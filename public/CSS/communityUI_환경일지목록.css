@@ -88,8 +88,8 @@ img{
 /*컨텐츠 영역*/
 .table_log_grid>div{
       width:100%
-      border 1px solid #c5c4c9;
-      background-color: #c5c4c9;
+      border 10px solid #FFFFFF;
+      background-color: rgba(255,255,255,0.6);
       padding:20px;
       font-size:1.0em;
       display:flex;
@@ -155,8 +155,7 @@ input.img-button{
   height:15px;
   float: left; 
   margin-left:360px;
-  background-color:#929196;
-  border:1px solid #929196;
+ 
 }
 
 .table_log_image{
