@@ -155,7 +155,8 @@ input.img-button{
   height:15px;
   float: left; 
   margin-left:360px;
- 
+  background-color:#929196;
+  border:1px solid #929196;
 }
 
 .table_log_image{

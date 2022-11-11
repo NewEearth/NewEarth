@@ -174,10 +174,10 @@ db.collection('env_com').get().then((snapShot) => {
     snapShot.forEach((doc) => {
       console.log(doc.data());
 
-      let template=
-       `<div class="env_item_list" style="border 20px solid rgba(255,255,255,0.5);
+      let template=`<div class="env_item_list" style="border 20px solid rgba(255,255,255,0.5);
       background-color: rgba(255,255,255,0.3); border-radius:10px;" >
           <div class="table_env_grid2">
+            <div class="table_env_date">${doc.data().date}</div>
             <div class="table_env_date" style="width: 100px; margin-left:470px; background-color: rgba(255,255,255,0.0); border:none;">${doc.data().date}</div>
               <div class="table_env_image" style="margin-left:20px; margin-top:10px; border-radius:10px; background-image: url('${doc.data().images}')"></div>
                 <div class="bye">
