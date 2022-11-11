@@ -80,7 +80,7 @@
                     </fieldset>
 
                     <div id="enter_Button" class="enter_Button">
-                        <button type="submit" style="margin-top: 30px; padding: 10px; display: inline-block;  background-color:rgba(255,255,255,0.5); border-radius:4px; color:rgb(255, 255, 255); cursor:pointer; font-size: 17px; float: right;">등록</button>
+                        <button type="submit" style="margin-top: 30px; padding: 10px; display: flex;  background-color:rgba(255,255,255,0.5); border-radius:4px; color:rgb(255, 255, 255); cursor:pointer; font-size: 17px; float: right;">등록</button>
                     </div>
 
                 </article>
@@ -105,22 +105,59 @@
 
             // Initialize Firebase
             const app = initializeApp(firebaseConfig);
-            </script>
-            <script>
+
+
+                const db = firebase.firestore();
+                //todolist 목록 DB에 저장하기
                 document.getElementById("enter_Button").addEventListener('click', () => {
                     firebase.auth().onAuthStateChanged((user) => {
                         if (user) {
                             const uid = user.uid;
-                            const db = firebase.firestore();
                             console.log("클릭");
-                            db.collection('TodoList').add({Day: day, Date: today, checkbox_text1: $('#checkbox_text1').val(), checkbox_text2: $('#checkbox_text2').val(), checkbox_text3: $('#checkbox_text3').val()})
+                            db.collection('TodoList').add({User: uid, Day: day, Date: today, checkbox_text1: $('#checkbox_text1').val(), checkbox_text2: $('#checkbox_text2').val(), checkbox_text3: $('#checkbox_text3').val()})
                         }}
                     )
                 })
                 
+                //todolist 목록 DB에서 가져오기
+                // var DB_Day = doc.data().Day;
+                // var DB_Date = doc.data().Date;
+                // var DB_checkbox_text1 = doc.data().checkbox_text1;
+                // var DB_checkbox_text2 = doc.data().checkbox_text2;
+                // var DB_checkbox_text3 = doc.data().checkbox_text3;
+
+                //document.getElementById("enter_Button").addEventListener('click', () => {
+                    db.collection('TodoList').where("Date", "==", today)
+                        .get()
+                        .then((result)=>{
+                            //console.log(result);
+                            result.forEach((doc)=>{
+                                //console.log(doc);
+                                console.log(doc.data());
+                                document.getElementById("check_list").innerHTML =`<div class="todolist_register" style="border: solid 3px; padding:10px">
+                                    <div class="Date">
+                                        ${doc.data().Date}
+                                    </div>
+                                    <div class="Todo1">
+                                        <input type="checkbox" id="checkbox_check1" name="check1">
+                                        <label for="checkbox_check1"></label>
+                                        Todo 1 : ${doc.data().checkbox_text1}
+                                    </div>
+                                    <div class="Todo2">
+                                        <input type="checkbox" id="checkbox_check2" name="check2">
+                                        <label for="checkbox_check2"></label>
+                                        Todo 2 : ${doc.data().checkbox_text2}
+                                    </div>
+                                    <div class="Todo3">
+                                        <input type="checkbox" id="checkbox_check3" name="check3">
+                                        <label for="checkbox_check3"></label>
+                                        Todo 3 : ${doc.data().checkbox_text3}
+                                    </div>
+                                </div>`
+        })
+    });
+//})
             </script>
-            
-        </script>
 
         <script src="./js/todolist.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
