@@ -1,6 +1,8 @@
 /** 환경발자국 */
 #content_env_step{
-    background-image: url(/imgs/ground1.jpg);
+    background-image: url(/imgs/ground.jpg);
+    border-radius: 20px;
+    opacity: 0.7;
 }
 #seed1{
     display: absolute;

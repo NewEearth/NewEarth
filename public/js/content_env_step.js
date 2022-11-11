@@ -3,20 +3,16 @@ import "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js";
 var seed_arr = '';
 //var seed_imgs = new Array();
 
+/* 한 달
 var date = new Date();
 var days = new Date(date.getFullYear(), date.getMonth() +1, 0).getDate();
 // var lastDate = new Date(year, month, 0).getDate();
 
 var year = date.getFullYear();
 var month = date.getMonth() + 1;
-
-// //씨앗 해당 연, 월
-// //var month = date.getFullYear() + "년" + (date.getMonth() + 1) + "월 입니다.";
-// //console.log(year);
-// //console.log(month);
-
-// //씨앗 나열
+var day = date.getDay();
 // var itemList=[];
+
 
 for (var i=1; i<=days; i++){
     var div = document.createElement("div");
@@ -33,6 +29,118 @@ for (var i=1; i<=days; i++){
     var seed_img = document.getElementById("seed_img").appendChild(img);
 }
 
+*/
+
+/** 일주일 */
+var currentDay = new Date();  
+var theYear = currentDay.getFullYear();
+var theMonth = currentDay.getMonth();
+var theDate  = currentDay.getDate();
+var theDayOfWeek = currentDay.getDay();
+ 
+// function date_week(){
+    var thisWeek = [];
+    
+    for(var i=0; i<7; i++) {
+        var resultDay = new Date(theYear, theMonth, theDate + (i - theDayOfWeek));
+        var yyyy = resultDay.getFullYear();
+        var mm = Number(resultDay.getMonth()) + 1;
+        var dd = resultDay.getDate();
+        
+        mm = String(mm).length === 1 ? '0' + mm : mm;
+        dd = String(dd).length === 1 ? '0' + dd : dd;
+        
+        thisWeek[i] = yyyy + '-' + mm + '-' + dd;    
+    }
+
+    console.log(thisWeek);
+    //document.getElementById("content_env_todo_title").innerHTML = today;
+    // var date_week0 = document.getElementById("content_env_step").innerHTML = thisWeek[0];
+    // var date_week1 = document.getElementById("date_week2").innerHTML = thisWeek[1];
+    // var date_week2 = document.getElementById("date_week3").innerHTML = thisWeek[2];
+    // var date_week3 = document.getElementById("date_week4").innerHTML = thisWeek[3];
+    // var date_week4 = document.getElementById("date_week5").innerHTML = thisWeek[4];
+    // var date_week5 = document.getElementById("date_week6").innerHTML = thisWeek[5];
+    // var date_week6 = document.getElementById("date_week7").innerHTML = thisWeek[6];
+
+    for(var i=0; i<7; i++) {
+    var div = document.createElement("div");
+        div.setAttribute("id", "seed_img");
+        div.setAttribute("style", "display: inline-block; vertical-align: middle;");
+        document.getElementById("content_env_step").appendChild(div);
+
+        var div = document.createElement("div");
+        div.setAttribute("id", "seed_img"+[i]);
+        div.setAttribute("style", "display: inline-block; vertical-align: middle;");
+        document.getElementById("seed_img").appendChild(div);
+
+        var text = document.createElement("div");
+        text.setAttribute("id", "date_week" + [i]);
+        text.setAttribute("style", "margin-left: 130px;");
+        
+        var img = document.createElement("img");
+        img.setAttribute("src", "./imgs/seed.png");
+        img.setAttribute("style", "width: 300px; height: 280px; margin-left: 30px;");
+        img.setAttribute("id", [i]);
+
+        document.getElementById("seed_img"+[i]).appendChild(img);
+        document.getElementById("seed_img"+[i]).appendChild(text);
+
+    }
+    for(var i=0; i<7; i++) {
+        document.getElementById("date_week"+[i]).innerHTML = thisWeek[i];
+
+        
+        document.getElementById([i])
+        .addEventListener( "click", () => {
+            console.log("seed2 페이지로 이동");
+            // $([i]).attr("src", './imgs/sprout.png');
+            window.location.href='./todolist_env_step.html'
+        });
+    }
+
+        
+    document.getElementById('2')
+        .addEventListener( "click", () => {
+            console.log("seed2 페이지로 이동");
+            $("#2").attr("src", './imgs/sprout.png');
+            window.location.href='./todolist_env_step.html'
+        });
+                
+
+    
+
+
+    
+    // return date_week;
+// }
+
+// date_week();
+// var a = date_week;
+
+// function seed_week(){
+    // for (var i=0; i<=7; i++){
+    //     var div = document.createElement("div");
+    //     div.setAttribute("id", "seed_img");
+    //     document.getElementById("content_env_step").appendChild(div);
+
+    //     var img = document.createElement("img");
+    //     img.setAttribute("src", "./imgs/seed.png");
+    //     img.setAttribute("style", "width: 180px; height: 180px;");
+    //     img.setAttribute("id", [i]);
+    //     document.getElementById("seed_img").appendChild(img);
+
+    //     var text = document.createElement("div");
+    //     text.setAttribute("style", "width: 180px; height: 180px;");
+    //     text.setAttribute("id", "date_week" + [i]);
+    //     document.getElementById("seed_img").appendChild(text);
+    // }
+// }
+
+
+
+
+
 
 // $('div').children()
 //const elements = document.getElementById('content_env_step');
@@ -43,6 +151,7 @@ for (var i=1; i<=days; i++){
 //     // elements.addEventListener("click", )
 // }
 
+/*
 $("#1").attr("src", './imgs/sprout.png');
 $("#3").attr("src", './imgs/sprout.png');
 $("#5").attr("src", './imgs/sprout.png');
@@ -50,6 +159,8 @@ $("#8").attr("src", './imgs/sprout.png');
 $("#4").attr("src", './imgs/stem.png');
 $("#7").attr("src", './imgs/flower.png');
 $("#11").attr("src", './imgs/flower.png');
+*/
+
 // .addEventListener( "click", () => {
     // console.log("seed1 페이지로 이동");
     // $("#1").attr("src", './imgs/sprout.png');
@@ -120,12 +231,12 @@ $("#11").attr("src", './imgs/flower.png');
 //     // window.location.href='./todolist_env_step.html'
 // // });
 
-document.getElementById('11')
-.addEventListener( "click", () => {
-    console.log("seed11 페이지로 이동");
-    // $("#11").attr("src", './imgs/flower.png');
-    window.location.href='./todolist_env_step.html'
-});
+// document.getElementById('11')
+// .addEventListener( "click", () => {
+//     console.log("seed11 페이지로 이동");
+//     // $("#11").attr("src", './imgs/flower.png');
+//     window.location.href='./todolist_env_step.html'
+// });
 
 // document.getElementById('12').addEventListener( "click", () => {
 //     console.log("seed3 페이지로 이동");

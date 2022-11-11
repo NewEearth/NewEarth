@@ -79,7 +79,7 @@
           console.log(newData);
             db.collection('env_com').add(newData).then((result) => {
               console.log(result);
-              // window.location.href = "./index.html";
+              window.location.href = "./communityUI_환경보호방법목록.html";
             }).catch((err) => {
               console.log(err);
             });
@@ -237,7 +237,7 @@
     </div>
 
     <div class="env_container4">
-      <div class="env_enter" onclick="location.href='communityUI_환경보호방법목록.html'"><button id="send">등록하기</button></div>
+      <div class="env_enter"><button id="send">등록하기</button></div>
       <div class="env_lists"><a href="communityUI_환경보호방법목록.html" onclick="location.href='communityUI_환경보호방법작성.html'">목록</a></div>
     </div>
   </div>
