@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>To do list</title>
+        <link rel="stylesheet" href="./star background/star background/star.css">
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+HK:wght@300&display=swap');
+        </style>
+
+        <!-- update the version number as needed -->
+        <script defer src="/__/firebase/9.13.0/firebase-app-compat.js"></script>
+        <!-- include only the Firebase features as you need -->
+        <script defer src="/__/firebase/9.13.0/firebase-auth-compat.js"></script>
+        <script defer src="/__/firebase/9.13.0/firebase-database-compat.js"></script>
+        <script defer src="/__/firebase/9.13.0/firebase-firestore-compat.js"></script>
+        <script defer src="/__/firebase/9.13.0/firebase-storage-compat.js"></script>
+        <!-- 
+            initialize the SDK after all desired features are loaded, set useEmulator to false
+            to avoid connecting the SDK to running emulators.
+        -->
+        <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+        <!-- index.html 적용-->
+        <link rel="stylesheet" href="./CSS/style.css">
+
+    </head>
+    <body>
+        <div class="container_bubbles">
+            <div class="bubbles">
+              <span style="--i:11;"></span>
+              <span style="--i:12;"></span>
+              <span style="--i:24;"></span>
+              <span style="--i:10;"></span>
+              <span style="--i:14;"></span>
+              <span style="--i:23;"></span>
+              <span style="--i:18;"></span>
+              <span style="--i:16;"></span>
+              <span style="--i:19;"></span>
+              <span style="--i:20;"></span>
+              <span style="--i:22;"></span>
+              <span style="--i:25;"></span>
+              <span style="--i:18;"></span>
+              <span style="--i:21;"></span>
+              <span style="--i:15;"></span>
+              <span style="--i:13;"></span>
+              <span style="--i:26;"></span>
+              <span style="--i:17;"></span>
+              <span style="--i:13;"></span>
+              <span style="--i:28;"></span>
+              <span style="--i:11;"></span>
+              <span style="--i:12;"></span>
+              <span style="--i:24;"></span>
+              <span style="--i:10;"></span>
+              <span style="--i:14;"></span>
+              <span style="--i:23;"></span>
+              <span style="--i:18;"></span>
+              <span style="--i:16;"></span>
+              <span style="--i:19;"></span>
+              <span style="--i:20;"></span>
+              <span style="--i:22;"></span>
+              <span style="--i:25;"></span>
+              <span style="--i:18;"></span>
+              <span style="--i:21;"></span>
+              <span style="--i:15;"></span>
+              <span style="--i:13;"></span>
+              <span style="--i:26;"></span>
+              <span style="--i:17;"></span>
+              <span style="--i:13;"></span>
+              <span style="--i:28;"></span>
+              <span style="--i:11;"></span>
+              <span style="--i:12;"></span>
+              <span style="--i:24;"></span>
+              <span style="--i:10;"></span>
+              <span style="--i:14;"></span>
+              <span style="--i:23;"></span>
+              <span style="--i:18;"></span>
+              <span style="--i:16;"></span>
+              <span style="--i:19;"></span>
+              <span style="--i:20;"></span>
+              <span style="--i:22;"></span>
+              <span style="--i:25;"></span>
+              <span style="--i:18;"></span>
+              <span style="--i:21;"></span>
+              <span style="--i:15;"></span>
+              <span style="--i:13;"></span>
+              <span style="--i:26;"></span>
+              <span style="--i:17;"></span>
+              <span style="--i:13;"></span>
+              <span style="--i:28;"></span>
+              <span style="--i:11;"></span>
+              <span style="--i:12;"></span>
+              <span style="--i:24;"></span>
+              <span style="--i:10;"></span>
+              <span style="--i:14;"></span>
+              <span style="--i:23;"></span>
+              <span style="--i:18;"></span>
+              <span style="--i:16;"></span>
+              <span style="--i:19;"></span>
+              <span style="--i:20;"></span>
+              <span style="--i:22;"></span>
+              <span style="--i:25;"></span>
+              <span style="--i:18;"></span>
+              <span style="--i:21;"></span>
+              <span style="--i:15;"></span>
+              <span style="--i:13;"></span>
+              <span style="--i:26;"></span>
+              <span style="--i:17;"></span>
+              <span style="--i:13;"></span>
+              <span style="--i:28;"></span>
+            </div>
+          </div>
+        <!-- 상단 메뉴바 -->
+        <header class="container">
+            <div class="home" style="cursor: pointer;" onclick="location.href='worldmap.html'">
+                <img style="display: inline-block; width: 175px; height: 200px; margin:0px; padding: 0px;" src="https://firebasestorage.googleapis.com/v0/b/newearth-b3659.appspot.com/o/logoimg.png?alt=media&token=a7173598-5c5f-4586-b00f-8886c31d264d"></a>
+            </div>
+            <!-- env : environment -->
+            <nav class="top_list" style="margin-bottom: 100px; margin-top: 40px;   font-family: 'Noto Serif KR', serif;
+            font-size: 1.1em; margin-right:200px; word-spacing: 280px;">
+                <div class="location_env_record item"><a href="communityUI_환경일지목록.html" onclick="location.href='communityUI_환경일지목록.html'">환경일지</a></div>
+                <div class="location_env_protect_record item"><a href="communityUI_환경보호방법목록.html" onclick="location.href='communityUI_환경보호방법목록.html'">환경보호방법</a></div>
+                <div class="location_env_step item" style="cursor: pointer;">환경발자국</div>
+            </nav>
+            <!-- right -->
+            <nav class="top_list_2" style="margin-bottom: 100px; margin-top: 40px;">
+                <div class="home_button" style="cursor: pointer;" onclick="location.href='index.html'">
+                <img src="https://firebasestorage.googleapis.com/v0/b/newearth-b3659.appspot.com/o/%EC%A7%80%EA%B5%AC%20%EC%9D%B4%EB%AF%B8%EC%A7%80.png?alt=media&token=e9f565c6-660b-4d0c-8f74-bc15e48fbd56">
+                </div>
+                    <!--<div class="item login">로그인</div>-->
+            </nav>
+        </header>
+
+        <!-- todo -->
+        <div id="page_env_todo">
+            <aside class="left_list" style="font-family: 'Noto Serif KR', serif; font-size: 1.2em; margin-top:10px;">
+                <div class="location_env_step item" style="cursor: pointer;">환경발자국</div>
+                <div class="location_env_todo item" style="cursor: pointer;">To do list</div>
+            </aside>
+            <section id="content_env_todo" style="margin-top:100px; font-family: 'Noto Serif KR', serif;">
+                <article>  
+                    <fieldset id="check_list">
+                        <legend id="content_env_todo_title" >To Do List</legend>
+            
+                        <div class="todo1" style="border-radius:10px;">
+                        <input type="text" placeholder="Todo 1 : (예시)텀블러 사용하기" id="checkbox_text1" name="text1" required>
+                        <label for="checkbox_text1"></label>
+                        </div>
+
+                        <div class="todo2"  style="border-radius:10px;">
+                            <input type="text" placeholder="Todo 2 : (예시)나갈 때 불 끄기" id="checkbox_text2" name="text2" required>
+                            <label for="checkbox_text2"></label>
+                        </div>
+
+                        <div class="todo3"  style="border-radius:10px;">
+                        <input type="text" placeholder="Todo 3 : (예시)일회용품 사용하지 않기" id="checkbox_text3" name="text3" required>
+                        <label for="checkbox_text3"></label>
+                        </div>
+
+                    </fieldset>
+
+                    <div id="enter_Button" class="enter_Button">
+
+                        <!-- <button type="submit" style="margin-top: 30px; padding: 10px; display: flex;  background-color:rgba(255,255,255,0.5); border-radius:4px; color:rgb(255, 255, 255); cursor:pointer; font-size: 17px; float: right; font-family: 'Noto Serif KR'">등록</button> -->
+                    </div>
+
+                </article>
+            </section>
+        </div>
+        <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js";
+            // TODO: Add SDKs for Firebase products that you want to use
+            // https://firebase.google.com/docs/web/setup#available-libraries
+            import "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js";
+
+            // Your web app's Firebase configuration
+            const firebaseConfig = {
+                apiKey: "AIzaSyA1IhyMtiCyPjCzgvwI7prkD9QK9NjIHas",
+                authDomain: "newearth-b3659.firebaseapp.com",
+                projectId: "newearth-b3659",
+                storageBucket: "newearth-b3659.appspot.com",
+                messagingSenderId: "109865594723",
+                appId: "1:109865594723:web:576164973901997fdf2d56"
+            };
+
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+
+
+                const db = firebase.firestore();
+                //todolist 목록 DB에 저장하기
+                document.getElementById("enter_Button").addEventListener('click', () => {
+                    firebase.auth().onAuthStateChanged((user) => {
+                        if (user) {
+                            const uid = user.uid;
+                            console.log("클릭");
+                            db.collection('TodoList').add({User: uid, Day: day, Date: today, checkbox_text1: $('#checkbox_text1').val(), checkbox_text2: $('#checkbox_text2').val(), checkbox_text3: $('#checkbox_text3').val()})
+                        }}
+                    )
+                })
+                
+                //todolist 목록 DB에서 가져오기
+                // var DB_Day = doc.data().Day;
+                // var DB_Date = doc.data().Date;
+                // var DB_checkbox_text1 = doc.data().checkbox_text1;
+                // var DB_checkbox_text2 = doc.data().checkbox_text2;
+                // var DB_checkbox_text3 = doc.data().checkbox_text3;
+
+                //document.getElementById("enter_Button").addEventListener('click', () => {
+                    db.collection('TodoList').where("Date", "==", 9)
+                        .get()
+                        .then((result)=>{
+                            //console.log(result);
+                            result.forEach((doc)=>{
+                                //console.log(doc);
+                                console.log(doc.data());
+                                document.getElementById("check_list").innerHTML =`<div class="todolist_register" style="border: solid 3px; padding:10px">
+                                    <div class="Date">
+                                        ${doc.data().Date}
+                                    </div>
+                                    <div class="Todo1">
+                                        Todo 1 : ${doc.data().checkbox_text1}
+                                    </div>
+                                    <div class="Todo2">
+                                        Todo 2 : ${doc.data().checkbox_text2}
+                                    </div>
+                                    <div class="Todo3">
+                                        Todo 3 : ${doc.data().checkbox_text3}
+                                    </div>
+                                </div>`
+        })
+    });
+//})
+            </script>
+
+        <script src="./js/todolist.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- <script type="module" src="./js/add.js"></script> -->
+    </body>
+</html>

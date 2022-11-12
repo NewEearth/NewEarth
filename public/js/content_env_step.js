@@ -45,7 +45,7 @@ var theDayOfWeek = currentDay.getDay();
         var resultDay = new Date(theYear, theMonth, theDate + (i - theDayOfWeek));
         var yyyy = resultDay.getFullYear();
         var mm = Number(resultDay.getMonth()) + 1;
-        var dd = resultDay.getDate();
+        var dd = resultDay.getDate() +1;
         
         mm = String(mm).length === 1 ? '0' + mm : mm;
         dd = String(dd).length === 1 ? '0' + dd : dd;
@@ -54,14 +54,6 @@ var theDayOfWeek = currentDay.getDay();
     }
 
     console.log(thisWeek);
-    //document.getElementById("content_env_todo_title").innerHTML = today;
-    // var date_week0 = document.getElementById("content_env_step").innerHTML = thisWeek[0];
-    // var date_week1 = document.getElementById("date_week2").innerHTML = thisWeek[1];
-    // var date_week2 = document.getElementById("date_week3").innerHTML = thisWeek[2];
-    // var date_week3 = document.getElementById("date_week4").innerHTML = thisWeek[3];
-    // var date_week4 = document.getElementById("date_week5").innerHTML = thisWeek[4];
-    // var date_week5 = document.getElementById("date_week6").innerHTML = thisWeek[5];
-    // var date_week6 = document.getElementById("date_week7").innerHTML = thisWeek[6];
 
     for(var i=0; i<7; i++) {
     var div = document.createElement("div");
@@ -71,7 +63,7 @@ var theDayOfWeek = currentDay.getDay();
 
         var div = document.createElement("div");
         div.setAttribute("id", "seed_img"+[i]);
-        div.setAttribute("style", "display: inline-block; vertical-align: middle;");
+        div.setAttribute("style", "display: inline-block; vertical-align: middle; margin-top: 30px;");
         document.getElementById("seed_img").appendChild(div);
 
         var text = document.createElement("div");
@@ -89,27 +81,61 @@ var theDayOfWeek = currentDay.getDay();
     }
     for(var i=0; i<7; i++) {
         document.getElementById("date_week"+[i]).innerHTML = thisWeek[i];
-
-        
-        document.getElementById([i])
-        .addEventListener( "click", () => {
-            console.log("seed2 페이지로 이동");
-            // $([i]).attr("src", './imgs/sprout.png');
-            window.location.href='./todolist_env_step.html'
-        });
     }
 
-        
+    for(var i=0; i<7; i++) {      
+        document.getElementById([i])
+            .addEventListener( "click", () => {
+                console.log("seed" +[i] + "페이지로 이동");
+                // $([i]).attr("src", './imgs/sprout.png');
+                // window.location.href='./todolist_env_step' + [i] + '.html'
+            });
+    }
+                
+    $("#0").attr("src", './imgs/sprout.png');
+    $("#1").attr("src", './imgs/flower.png');
+    $("#2").attr("src", './imgs/stem.png');
+    $("#3").attr("src", './imgs/sprout.png');
+    $("#4").attr("src", './imgs/flower.png');
+    $("#5").attr("src", './imgs/seed.png');
+    $("#6").attr("src", './imgs/seed.png');
+
+    document.getElementById('0')
+        .addEventListener( "click", () => {
+            console.log("seed0 페이지로 이동");
+            window.location.href='./todolist_env_step0.html'
+        });
+    document.getElementById('1')
+        .addEventListener( "click", () => {
+            console.log("seed1 페이지로 이동");
+            window.location.href='./todolist_env_step1.html'
+        });
     document.getElementById('2')
         .addEventListener( "click", () => {
             console.log("seed2 페이지로 이동");
-            $("#2").attr("src", './imgs/sprout.png');
+            window.location.href='./todolist_env_step2.html'
+        });
+    document.getElementById('3')
+        .addEventListener( "click", () => {
+            console.log("seed3 페이지로 이동");
+            window.location.href='./todolist_env_step3.html'
+        });
+    document.getElementById('4')
+        .addEventListener( "click", () => {
+            console.log("seed4 페이지로 이동");
+            window.location.href='./todolist_env_step4.html'
+        });
+    document.getElementById('5')
+        .addEventListener( "click", () => {
+            console.log("seed5 페이지로 이동");
             window.location.href='./todolist_env_step.html'
         });
-                
-
+    // document.getElementById('6')
+    //     .addEventListener( "click", () => {
+    //         console.log("seed6 페이지로 이동");
+    //         window.location.href='./todolist_env_step6.html'
+    //     });
     
-
 
     
     // return date_week;
